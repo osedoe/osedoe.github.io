@@ -1,0 +1,45 @@
+#pre-craft {
+    align-content: center;
+    background: linear-gradient(to bottom, $glass-blue 30%, $glass-yellow);
+    display: grid;
+    grid-template-columns: 1fr;
+    height: 100%;
+    text-align: center;
+    width: auto;
+}
+
+.diamond-wrapper {
+    min-height: 600px;
+    margin: 0 auto;
+}
+
+.diamond {
+    background-color: $black;
+    color: $white;
+    display: inline-block;
+    height: 300px;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+    transform: rotate(45deg);
+    width: 300px;
+}
+
+.diamond::before {
+    border: 3px solid $black;
+    content: '';
+    position: absolute;
+    top: -5%;
+    left: 15%;
+    height: 115%;
+    width: 100%;
+}
+
+.diamond-content {
+    display: table-cell;
+    font-size: .85em;
+    height: inherit;
+    transform: rotate(-45deg);
+    vertical-align: middle;
+    width: inherit;
+}

@@ -1,0 +1,28 @@
+header {
+    align-content: center;
+    background: linear-gradient(
+        to bottom,
+        $glass-white 40%,
+        $glass-blue
+    );
+    display: grid;
+    height: 100vh;
+    position: relative;
+    text-align: center;
+    
+        .triangle-down {
+            border-left: 80px solid transparent;
+            border-right: 80px solid transparent;
+            border-top: 80px solid $black;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+        }
+
+        .jumbotron {
+            grid-area: "jumbo";
+            margin: 0 3em;
+        }
+}

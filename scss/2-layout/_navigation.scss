@@ -1,0 +1,41 @@
+nav {
+    background: $black;
+    font-size: 1.7em;
+    height: 100vh;
+    left: 0;
+    overflow-x: hidden;
+    position: fixed;
+    text-align: center;
+    text-decoration: none;
+    top: 0;
+    width: 0; // Change it with JS to fit the device view
+    z-index: 1;
+
+    span a {
+        color: white;
+        top: 20px;
+        right: 20px;
+        text-decoration: none;
+        position: absolute;
+    }
+
+    ul {
+        display: grid;
+        list-style-type: none;
+        grid-template-columns: 1fr;
+        justify-content: center;
+        margin:  4em 0 0 0;
+
+        li {
+            margin: 1em;
+
+            a {
+                display: block;
+                color: $white;
+                text-decoration: none;
+                
+
+            }
+        }
+    }
+}
