@@ -1,4 +1,4 @@
-@media (min-width: 700px) {
+@media (min-width: 768px) {
     // GENERAL STYLES
     body {
         box-sizing: border-box;
@@ -6,9 +6,19 @@
     }
 
     // NAVIGATION
-    nav {
-        width: 0; // js
-   
+    
+
+    .logo-wrapper {
+
+        .logo-mobile {
+            display: none;
+        }
+
+        .logo-desktop {
+            display: block;
+            max-width: 160px;
+        }
+        
     }
 
     // HEADER
@@ -18,81 +28,6 @@
         .jumbotron {
             grid-column: 2/3;
             margin: 0 auto;
-        }
-    }
-
-    // PRE-CRAFT
-    #pre-craft {
-        grid-template-columns: 1fr 1fr 1fr;
-
-        .diamond-wrapper {
-            grid-column: 2/3;
-            align-self: start;
-            margin: 0 auto;
-
-            .diamond {
-                height: 410px;
-                width: 410px;
-            }
-
-            .diamond-content {
-                font-size: .85em;
-            }
-        }
-    }
-
-    // CRAFT
-    #craft {
-        grid-gap: 4em;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 3fr;
-        padding: 3em;
-        max-height: 100vh;
-
-        .heading-wrapper {
-            grid-column: 1/2;
-            grid-row: 1/2;
-            padding: $padding-desktop;
-        }
-
-        .craft-icons {
-            grid-column: 2/3;
-            grid-row: 2/3;
-        }
-
-        .content-wrapper {
-            grid-row: 3/4;
-            grid-column: 1/2;
-            place-self: center;
-            padding: $padding-desktop;
-        }
-
-        .chevron-wrapper {
-            grid-column: 2/3;
-            grid-row: 3/4;
-        }
-    }
-
-    // WORK
-    #work {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows: 1fr 5fr;
-        grid-gap: 0;
-
-        .heading-wrapper {
-            grid-column: 4/5;
-            grid-row: 1/2;
-            text-align: right;
-            padding-top: 1em;
-        }
-
-        .projects {
-            justify-self: stretch;
-            grid-row: 2 / 3;
-
-            img {
-                max-width: 100%;
-            }
         }
     }
 
@@ -129,3 +64,28 @@
         }
     }
 }
+    
+    // WORK
+    #work {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 5fr;
+        grid-gap: 0;
+
+        .heading-wrapper {
+            grid-column: 4/5;
+            grid-row: 1/2;
+            text-align: right;
+            padding-top: 1em;
+        }
+
+        .projects {
+            justify-self: stretch;
+            grid-row: 2 / 3;
+
+            img {
+                max-width: 100%;
+            }
+        }
+    }
+
+    
