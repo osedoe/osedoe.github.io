@@ -1,14 +1,30 @@
 header {
     align-content: center;
-    background: linear-gradient(
-        to bottom,
-        $glass-white 40%,
-        $glass-blue
-    );
+    background: $dirty-white;
     background-size: 100%;
     display: grid;
-    height: 100vh;
+    grid-template-columns: 1fr 3fr 1fr;
+    min-height: 800px;
     position: relative;
-    text-align: center;
 
+    .jumbotron {
+        grid-column: 2/3;
+    }
+}
+
+.logo-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 80px;
+    width: 160px;
+
+    .logo-mobile {
+        display: block;
+        max-width: 80px;
+    }
+
+    .logo-desktop {
+        display: none;
+    }
 }

@@ -1,29 +1,24 @@
 .nav-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    justify-content: space-evenly;
-
-    .logo-wrapper {
-    
-        .logo-desktop {
-            display: none;
-        }
-    
-        .logo-mobile {
-            display: block;
-            max-width: 80px;
-        }
-    }
+    position: fixed;
+    right: 0;
+    z-index: 3;
 }
 
-.toggle {
+.burger {
     background: $black;
     border: 4px solid $dirty-white;
     height: 80px;
     width: 80px;
-    position: relative;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    transition-property: border;
+    transition-duration: .2s;
 
-    span {
+    .burger-mobile {
         background: $blue;
         height: 7px;
         width: 45px;
@@ -36,7 +31,7 @@
         transition-delay: .1s;
     }
 
-    span:before {
+    .burger-mobile:before {
         content: '';
         position: absolute;
         width: 100%;
@@ -50,7 +45,7 @@
         transition-duration: .5s, .5s;
     }
 
-    span:after {
+    .burger-mobile:after {
         content: '';
         position: absolute;
         width: 100%;
@@ -63,6 +58,10 @@
         transition-delay: .5s, 0;
         transition-duration: .5s, .5s;
     }
+}
+
+.burger.active {
+    border: 0;
 }
 
 .toggle.active span:before {
@@ -80,29 +79,44 @@
     background: transparent;
 }
 
-//===============//
-nav {
-    text-align: right;
-    text-decoration: none;
 
-    span a {
-        text-decoration: none;
-    }
+nav {
+    background: $black;
+    color: $dirty-white;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 0;
+    text-align: center;
+    text-decoration: none;
+    padding: 0;
+    transition-duration: .5s;
 
     ul {
         display: grid;
-        list-style-type: none;
-        grid-template-columns: 1fr;
         justify-content: center;
+        align-content: center;
+        list-style-type: none;
+        margin-top: 1em;
 
         li {
+            // height: 80px;
 
             a {
+                // border: 4px solid $dirty-white;
+                color: $dirty-white;
                 display: block;
-                color: $black;
+                height: 80px;
+                font-size: 1em;
                 font-weight: bold; 
                 text-decoration: none;
             }
         }
     }
+}
+
+nav.active {
+    width: 100vw;
+    height: 100vh;
 }

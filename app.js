@@ -1,7 +1,14 @@
 const burger = document.querySelector('.burger');
+const nav = document.querySelector('nav');
 
 burger.addEventListener('click', ()=> {
-    const result = burger.className.includes('active') 
-        ? burger.className = 'burger toggle'
-        : burger.className += ' active';
+    if (burger.className.includes('active')) {
+        burger.className = 'burger toggle';
+        nav.className = '';
+        
+    } else {
+        burger.className += ' active';
+        nav.className += ' active';
+    }
+        
 });
