@@ -1,0 +1,12 @@
+{
+  "name": "Portfolio-JD",
+  "version": "0.1.0",
+  "author": "Jose Diaz",
+  "devDependencies": {
+    "grunt": "*",
+    "grunt-contrib-concat": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-sass": "*",
+    "grunt-contrib-watch": "*"
+  }
+}

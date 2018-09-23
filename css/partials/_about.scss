@@ -1,0 +1,34 @@
+/****** ABOUT ********/
+
+.about {
+	background: $color_shark;
+	color: $color_dirty_white;
+
+	img {
+		border: 3px solid $color_light_blue;
+		margin-bottom: 1em;
+	}
+
+	ul {
+		padding: 0;
+	}
+
+	li {
+		list-style: none;
+	}
+}
+
+.skills-wrapper {
+	background-color: $color_shark;
+	border: 3px solid $color_dirty_white;
+	margin-bottom: 1em;
+	padding: 0 0;
+	text-align: center;
+	width: 100%;
+}
+
+.skills-bar {
+	background-color: $color_light_blue;
+	padding: 0.2em 0;
+	width: 0;
+}

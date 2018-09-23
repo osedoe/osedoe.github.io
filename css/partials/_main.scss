@@ -1,0 +1,115 @@
+	/****** Main ******/
+
+body {
+	color: $color_dirty_white;
+	font-family: $font_0, $font_1;
+	overflow-x: hidden; 
+}
+
+.heading {
+	text-shadow: 2px 2px 3px rgb(40, 40, 40);
+}
+
+.heading2 {
+	background-color: $color_shark_40;
+	display: inline-block;
+	padding: 0.3em;
+	border-radius: 3px;
+}
+
+p {
+	margin-bottom: 1em;
+}
+
+a, button, a:hover {
+	color: $color_dirty_white;
+	text-decoration: none;
+}
+
+section {
+	padding: 3em 0 8em 0;
+}
+
+/****** LANDING WEBSITE ******/
+
+header {
+	background-color: $color_light_blue;
+
+	div div {
+		align-items: center;
+		color: $color_shark;	
+		display: flex;
+		flex-flow: column;
+		height: 100vh;
+		justify-content: center;
+		text-shadow: 1px 1px $black_70;
+	}
+
+	.fa {
+		font-size: 0.6em;
+	}
+}
+
+
+/****** BUTTON TO TOP ******/
+
+.arrowToTop {
+	border-radius: 8px;
+	bottom: 1.4em;
+	color: $color_light_blue;
+	cursor: pointer;
+	font-size: 1.3em;
+	font-weight: 800;
+	outline: none;
+	position: fixed;
+	right: 1.4em;
+	z-index: 1;
+}
+
+.arrowToTop:hover {
+	color: $color_light_blue;
+	@include transform-scale(1.3);
+}
+
+
+/****** FOOTER ******/
+
+footer {
+	background-color: $color_shark;
+	
+	a {
+		margin-bottom: 0.5em;	
+	}
+}
+
+.btn-cp {
+	background-color: $black;
+	color: white;
+}
+
+
+/* MEDIA QUERIES */
+
+@media (min-width:740px)  {
+	
+	header {
+		background:
+			$url_0 center center fixed;
+		background-size: cover;
+		
+		height: 100vh;
+		overflow: hidden;
+		position: relative;
+		div div {
+			color: $black;
+			text-shadow: none;
+		}
+	}
+
+	.projects {
+		background:
+			$url_1 center center fixed;
+		background-size: cover;
+	}
+
+}

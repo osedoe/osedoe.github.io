@@ -1,119 +1,256 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Jose Diaz | Web Developer</title>
 
-    <!-- STYLE -->
-    <link href="https://fonts.googleapis.com/css?family=Audiowide|Exo+2" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
-        crossorigin="anonymous">
-    <link rel="stylesheet" href="css/main.css">
+  <title>J. Diaz | Front-End Web Developer</title>
+<!-- META TAGS -->
+  <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Bristol based web developer focused on creating mobile-friendly websites using HTML, CSS, JavaScript, Jquery and Bootstrap.">
+  <meta name="keywords" content="web developer, html, css, javascript, jquery, bootstrap, mobile, Bristol, front end developer">
+  <meta name="author" content="Jose Diaz">
+
+<!-- STYLE -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
+  <link href="css/font-awesome.min.css" rel="stylesheet">
+  <link href="css/bootstrap-social.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato%7CShare+Tech+Mono" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
 </head>
-
 <body>
-    <!-- NAVIGATION -->
-    <div class="nav-wrapper">
-        <div class="burger toggle">
-            <span class="burger-mobile"></span>
-        </div>
-        <nav>
-            <ul>
-                <li>
-                    <a href="#">HOME</a>
-                </li>
-                <li>
-                    <a href="#">ABOUT</a>
-                </li>
-                <li>
-                    <a href="#">WORK</a>
-                </li>
-                <li>
-                    <a href="#">BLOG</a>
-                </li>
-            </ul>
-        </nav>
+
+<!-- PRELOADER -->
+<div class="loader-container">
+  <div class="loader"></div>
+</div>
+
+<!-- NAVIGATION BAR -->
+<nav class="navbar sticky-top navbar-full pull-xs-right">
+  <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#CollapseNavBar" aria-controls="CollapseNavBar" aria-expanded="false" aria-label="Toggle navigation">
+        &#9776;
+  </button>
+  <div class="offset-sm-1 collapse navbar-toggleable-xs pull-xs-right" id="CollapseNavBar">
+    <ul class="nav navbar-nav">
+      <li class="nav-item"><a class="nav-link" href="#home" data-target="#CollapseNavBar"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+      <li class="nav-item"><a class="nav-link" href="#about" data-target="#CollapseNavBar">About</a></li>
+      <li class="nav-item"><a class="nav-link" href="#work" data-target="#CollapseNavBar">Work</a></li>
+      <li class="nav-item"><a class="nav-link" href="#footer" data-target="#CollapseNavBar">Contact</a></li>
+      <!-- <li class="nav-item"><a class="nav-link disabled" href="#" title="">Blog</a></li> -->
+    </ul>
+  </div>
+</nav>
+
+<!-- LANDING -->
+<header id="home" class="container-fluid">
+  <div class="row">
+    <div id="jumbotron" class="text-xs-center">
+      <div class="jumbolite">
+        <h1> <i class="fa fa-chevron-left" aria-hidden="true"></i> Jose Diaz <i class="fa fa-chevron-right" aria-hidden="true"></i> </h1>
+        <h2> Front-End Web Developer </h3>
+      </div>
     </div>
-    
-    <!-- /// LANDING /// -->
-    <header>
-        <!-- LOGO -->
-        <div class="logo-wrapper">
-            <img class="logo logo-mobile" src="/images/Logo-mobile.svg" alt="Logo Mobile">
-            <img class="logo logo-desktop" src="/images/Logo-desktop.svg" alt="Logo Desktop">
-        </div>
-        <!-- JUMBOTRON -->
-        <div class="jumbotron">
-            <h1>Hola </h1>
-            <h1>I'm Jose.</h1>
-            <h1>A Web Developer from the Canary Islands.</h1>
-        </div>
-    </header>
+  </div>
+</header>
 
-    <!-- ABOUT -->
-    <section id="about" class="about">
-        <div class="heading-wrapper">
-            <h2>- ABOUT</h2>
+<!-- ARROW TO TOP -->
+<div class="arrowToTop">
+  <i class="fa fa-chevron-up fa-2x" aria-hidden="true"></i>
+</div>
+  
+<!-- ABOUT -->
+<section id="about" class="about container-fluid">
+  <div class="offset-sm-1">
+    <h2 class="heading">- ABOUT -</h2>
+    <div class="row">
+      <div class="col-xs-12 col-sm-5">
+        <div class="col-xs-6 col-sm-6">
+          <img src="images/profile2.jpg" alt="profile" class="img-fluid" />
         </div>
-        <div class="profile-wrapper">
-            <img src="./images/profile2.jpg" alt=" ">
+        <div class="col-xs-12">
+          <p class=""><strong>I am a Web Developer based in Bristol, UK.</strong></p>
+          <p>I specialise in crafting astonishing websites that gives businesses the online presence they need.</p>
+          <p>I grew up surrounded by computers. When the first PCs appeared and become affordable for normal people, my father bought a Pentium 1 that I’ll occasionally use to play games. Before learning how to write or read, I learned the commands to move around MS-DOS, and launch games.</p>
+          <p>From there, my passion for IT only grew. When Internet appeared in our house and webpages were starting to blossom, I learned HTML2, and started building music websites full of .midi and .gif files, since it was the trend around then.</p>
+          <p>But all of that was just a hobby, and done purely for fun. It was in 2014, when I decided that I wanted to do something more exciting that work in a kitchen. The logic behind every piece of code I will write, and the problem-solving skills I was gaining in the meantime made me realise that I would love to work in an environment where I would be required to learn something new or find algorithmic solutions to the problems I face and translating it into a program.</p>
         </div>
-        <div class="about-icons">
-            <a href="https://github.com/OseDoe">
-                <i class="fab fa-github"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/jose-diaz-gonzalez-696067107/">
-                <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="https://codepen.io/osedoe/#">
-                <i class="fab fa-codepen"></i>
-            </a>
-        </div>
-        <div class="content-wrapper">
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto, consequatur eius. Dolor nesciunt quasi
-                dignissimos, enim ipsam quibusdam hic vel vitae adipisci! Quo aliquid accusantium vel doloremque possimus
-                numquam, unde non minus explicabo iure ab, odio, iusto dolor consequatur sed impedit odit neque magni
-                natus doloribus veritatis dignissimos illum. Doloribus excepturi quibusdam temporibus nihil amet fugit
-                eius rem quisquam assumenda.</p>
-        </div>
-    </section>
+      </div>
+      <div class="col-xs-10 col-sm-5 text-xs-justify m-y-2">
+        <p class="">My set of skills are the sum of the front-end technologies:</p>
+          <ul>
+            <li>
+              <div class="skills-wrapper">
+                <div class="skills-bar skills-html">HTML5</div>
+              </div>
+            </li>
+            <li>
+              <div class="skills-wrapper">
+                <div class="skills-bar skills-css">CSS3</div>
+              </div>
+            </li>
+            <li>
+              <div class="skills-wrapper">
+                <div class="skills-bar skills-sass">Sass</div>
+              </div>
+            </li>
+            <li>
+              <div class="skills-wrapper">
+                <div class="skills-bar skills-js">Javascript</div>
+              </div>
+            </li>
+            <li>
+              <div class="skills-wrapper">
+                <div class="skills-bar skills-bs">Bootstrap</div>
+              </div>
+            </li>
+            <li>
+              <div class="skills-wrapper">
+                <div class="skills-bar skills-jq">jQuery</div>
+              </div>
+            </li>
+            <li>
+              <div class="skills-wrapper">
+                <div class="skills-bar skills-grunt">Grunt</div>
+              </div>
+            </li>
+            <li>
+              <div class="skills-wrapper">
+                <div class="skills-bar skills-git">Git</div>
+              </div>
+            </li>
+          </ul>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!--  WORK -->
-    <section id="work" class="class">
-        <div class="heading-wrapper">
-            <h2>- WORK</h2>
-        </div>
-        <div class="projects project-one">
-            <img src="https://source.unsplash.com/random/500x600/" alt="">
-            <div></div>
-        </div>
-        <div class="projects project-two">
-            <img src="https://source.unsplash.com/random/500x600/" alt="">
-            <div></div>
-        </div>
-        <div class="projects project-three">
-            <img src="https://source.unsplash.com/random/500x600/" alt="">
-            <div></div>
-        </div>
-        <div class="projects project-four">
-            <img src="https://source.unsplash.com/random/500x600/" alt="">
-            <div></div>
-        </div>
-    </section>
+<!-- WORK -->
+<section id="work" class="projects container-fluid">
+  <div class="col-sm-10 offset-sm-1">
+    <h2 class="heading">- WORK -</h2>
+    <p class="heading heading2">These are the things I've done</p>
+    <div class="row project-container">
+      <div class="col-xs-10 col-sm-8 col-md-4 col-lg-4 col-xl-3">
+        <figure class="cap-bot">
+          <a href="http://www.guessgame.jdiaz.co.uk">
+            <img src="images/guessgamePS.jpg" class="img-fluid" alt="GuessGame in plain Javascript">
+            <figcaption class="text-center">Guess game</figcaption>
+          </a>
+        </figure>
+      </div>
+      <div class="col-xs-10 col-sm-8 col-md-4 col-lg-4 col-xl-3 offset-xl-1">
+        <figure class="cap-bot">
+          <a href="http://www.collinscoffee.jdiaz.co.uk/">
+            <img src="images/collinsPS2.jpg" class="img-fluid" alt="CoffeeShopWebsite">
+            <figcaption class="text-center">Coffee shop</figcaption>
+          </a>
+        </figure>
+      </div>
+      <div class="col-xs-10 col-sm-8 col-md-4 col-lg-4 col-xl-3 offset-xl-1">
+        <figure class="cap-bot">
+          <a href="http://www.encryptionapp.jdiaz.co.uk/">
+            <img src="images/encryptPS2.jpg" class="img-fluid" alt="App that encrypts text">
+            <figcaption class="text-center">Encryption app</figcaption>
+          </a>
+        </figure>
+      </div>
+    </div>
+    <div class="row project-container">
+      <div class="col-xs-10 col-sm-8 col-md-4 col-lg-4 col-xl-3">
+        <figure class="cap-bot">
+          <a href="http://www.randomquote.jdiaz.co.uk">
+            <img src="images/randomQuotePS2.jpg" class="img-fluid" alt="Generator of quotes from famous people">
+            <figcaption class="text-center">Famous-Quotes Generator</figcaption>
+          </a>
+        </figure>
+      </div>
+      <div class="col-xs-10 col-sm-8 col-md-4 col-lg-4 col-xl-3 offset-xl-1">
+        <figure class="cap-bot">
+          <a href="http://www.localweather.jdiaz.co.uk/">
+            <img src="images/localweatherPS2.jpg" class="img-fluid" alt="Webapp that displays the local weather">
+            <figcaption class="text-center">Local Weather App</figcaption>
+          </a>
+        </figure>
+      </div>
+      <div class="col-xs-10 col-sm-8 col-md-4 col-lg-4 col-xl-3 offset-xl-1">
+        <figure class="cap-bot">
+          <a href="http://www.wikiviewer.jdiaz.co.uk/">
+            <img src="images/wikiviewerPS.jpg" class="img-fluid" alt="Wikipedia Search Bar">
+            <figcaption class="text-center">Wiki Viewer</figcaption>
+          </a>
+        </figure>
+      </div>
+      <div class="col-xs-10 col-sm-8 col-md-4 col-lg-4 col-xl-3">
+        <figure class="cap-bot">
+          <a href="http://www.todoapp.jdiaz.co.uk/">
+            <img src="images/todoappPS.jpg" class="img-fluid" alt="Simple To-Do App">
+            <figcaption class="text-center">To-Do App</figcaption>
+          </a>
+        </figure>
+      </div>
+      <div class="col-xs-10 col-sm-8 col-md-4 col-lg-4 col-xl-3 offset-xl-1">
+        <figure class="cap-bot">
+          <a href="http://www.rgbgamejs.jdiaz.co.uk/">
+            <img src="images/rgbgamejs.jpg" class="img-fluid" alt="RGB Game in Javascript">
+            <figcaption class="text-center">RGB Game in Javascript</figcaption>
+          </a>
+        </figure>
+      </div>
+      <!-- <div class="col-xs-10 col-sm-8 col-md-4 col-lg-3 offset-lg-1">
+        <figure class="cap-bot">
+          <img src="images/encryptPS.jpg" class="img-fluid" alt="GuessGameJS">
+          <figcaption class="text-center"><a href="http://www.encryptionapp.jdiaz.co.uk/">Encryption app</a></figcaption>
+        </figure>
+      </div> -->
+    </div>
+  </div>
+</section>
 
-    
+<!-- Footer -->
+<footer id="footer" class="container-fluid text-xs-center">
+  <div class="row">
+    <div class="col-xs-12 col-sm-6 offset-sm-3">
+      <br>
+      <p>Do you like my work? I'm available to hire! Drop me an email so we can talk in detail.</p>
+      <br>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-10 offset-xs-1 col-sm-6 offset-sm-3">
+      <a href="https://github.com/Osedread" class="btn-lg btn btn-social-icon btn-github">
+        <span class="fa fa-github"></span>
+      </a>
+      <a href="mailto:osedread@gmail.com" class="btn-lg btn btn-social-icon btn-cp">
+        <span class="fa fa-envelope"></span>
+      </a>
+      <a href="https://uk.linkedin.com/in/josé-díaz-gonzález-696067107" class="btn-lg btn btn-social-icon btn-linkedin">
+        <span class="fa fa-linkedin"></span>
+      </a>
+    </div>
+    <div class="col-xs-10 offset-xs-1 col-sm-6 offset-sm-3">
+      <a href="https://twitter.com/Osedread" class="btn-lg btn btn-social-icon btn-twitter">
+        <span class="fa fa-twitter"></span>
+      </a>
+      <a href="https://www.facebook.com/osedg" class="btn-lg btn btn-social-icon btn-facebook">
+        <span class="fa fa-facebook"></span>
+      </a>
+      <a href="https://www.instagram.com/justacabinetmaker/" class="btn-lg btn btn-social-icon btn-google">
+        <span class="fa fa-instagram"></span>
+      </a>
+    </div>
+  </div>
+  <br>
+  <br>
+</footer>
 
-    <!-- FOOTER -->
-    <footer>
-        <p>Made with
-            <i class="fas fa-heart"></i> by J. Diaz</p>
-    </footer>
-
-    <script type="text/javascript " src="app.js "></script>
+<!-- SCRIPTS -->
+  <script
+    src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="built.min.js"></script>
+  <script src="js/jquery.inview.min.js"></script>
 
 </body>
-
 </html>
