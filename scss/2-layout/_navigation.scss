@@ -79,7 +79,6 @@
     background: transparent;
 }
 
-
 nav {
     background: $black;
     color: $dirty-white;
@@ -99,6 +98,7 @@ nav {
         align-content: center;
         list-style-type: none;
         margin-top: 1em;
+        padding-top: 20vh;
 
         li {
             // height: 80px;
@@ -109,7 +109,7 @@ nav {
                 display: block;
                 height: 80px;
                 font-size: 1em;
-                font-weight: bold; 
+                font-weight: bold;
                 text-decoration: none;
             }
         }

@@ -113,7 +113,8 @@ nav {
     justify-content: center;
     align-content: center;
     list-style-type: none;
-    margin-top: 1em; }
+    margin-top: 1em;
+    padding-top: 20vh; }
     nav ul li a {
       color: whitesmoke;
       display: block;
@@ -142,7 +143,8 @@ header {
   top: 0;
   left: 0;
   height: 80px;
-  width: 160px; }
+  width: 160px;
+  z-index: 20; }
   .logo-wrapper .logo-mobile {
     display: block;
     max-width: 80px; }
