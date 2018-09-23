@@ -1,0 +1,111 @@
+@media (min-width: 768px) {
+    // GENERAL STYLES
+    body {
+        box-sizing: border-box;
+        font-size: 1em;
+    }
+
+    // NAVIGATION
+    .burger {
+        width: 160px;
+        top: 40px;
+        right: 40px;
+    }
+
+    nav {
+        ul {
+            margin-top: 1em;
+
+            li {
+                a {
+                    font-size: 3em;
+                }
+            }
+        }
+    }
+
+    nav.active {
+        width: 30vw;
+    }
+   
+    // HEADER
+    header {
+        grid-template-columns: 6fr 1fr 5fr 1fr;
+
+        .jumbotron {
+            grid-column: 3/4;
+            margin: 0 auto;
+        }
+    }
+
+    .logo-wrapper {
+        top: 40px;
+        left: 40px;
+
+        .logo-mobile {
+            display: none;
+        }
+
+        .logo-desktop {
+            display: block;
+            max-width: 160px;
+        }   
+    }
+
+    // ABOUT
+    #about {
+        grid-gap: 4em;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        padding: 12vh 3em 3em 3em;
+        padding-top: 12vh;
+
+        .heading-wrapper {
+            grid-column: 2/3;
+            grid-row: 1/2;
+            place-self: center;
+        }
+
+        .profile-wrapper {
+            grid-column: 1/2;
+            grid-row: 1/3;
+            margin: 0 auto;
+            place-self: center;
+        }
+
+        .about-icons {
+            grid-column: 1/2;
+            grid-row: 3/4;
+        }
+
+        .content-wrapper {
+            grid-column: 2/3;
+            grid-row: 2/4;
+            place-self: center;
+        }
+    }
+    
+    // WORK
+    #work {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 5fr;
+        grid-gap: 0;
+
+        .heading-wrapper {
+            grid-column: 4/5;
+            grid-row: 1/2;
+            text-align: right;
+            padding-top: 1em;
+        }
+
+        .projects {
+            justify-self: stretch;
+            grid-row: 2 / 3;
+
+            img {
+                max-width: 100%;
+            }
+        }
+    }
+
+}

@@ -1,0 +1,11 @@
+footer {
+    background-color: $black;
+    color: $dirty-white;
+    display: grid;
+    height: 10vh;
+
+    p {
+        font-family: $audiowide;
+        place-self: center;
+    }
+}
