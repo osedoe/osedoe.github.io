@@ -1,0 +1,31 @@
+.heading-wrapper {
+	align-content: end;
+	background-color: var(--black);
+	border: 3px solid var(--yellow);
+	color: var(--dirty-white);
+	display: grid;
+	margin: 1em;
+	padding: var(--padding-mobile);
+	place-self: center;
+	text-align: end;
+	position: relative;
+}
+
+.heading-wrapper::before {
+	border: 3px solid var(--dirty-white);
+	content: "";
+	position: absolute;
+	top: -10%;
+	left: 5%;
+	height: 95%;
+	width: 105%;
+}
+
+.heading-wrapper::after {
+	border-bottom: 3px solid var(--blue);
+	content: "";
+	position: absolute;
+	bottom: 30%;
+	right: -8%;
+	width: 95%;
+}
