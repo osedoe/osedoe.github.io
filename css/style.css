@@ -1,0 +1,273 @@
+/****** Main ******/
+body {
+  color: gainsboro;
+  font-family: Share Tech Mono, monospace;
+  overflow-x: hidden;
+}
+
+.heading {
+  text-shadow: 2px 2px 3px #282828;
+}
+
+.heading2 {
+  background-color: rgba(40, 40, 40, 0.4);
+  display: inline-block;
+  padding: 0.3em;
+  border-radius: 3px;
+}
+
+p {
+  margin-bottom: 1em;
+}
+
+a, button, a:hover {
+  color: gainsboro;
+  text-decoration: none;
+}
+
+section {
+  padding: 3em 0 8em 0;
+}
+
+/****** LANDING WEBSITE ******/
+header {
+  background-color: #3498db;
+}
+
+header div div {
+  align-items: center;
+  color: #282828;
+  display: flex;
+  flex-flow: column;
+  height: 100vh;
+  justify-content: center;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.7);
+}
+
+header .fa {
+  font-size: 0.6em;
+}
+
+/****** BUTTON TO TOP ******/
+.arrowToTop {
+  border-radius: 8px;
+  bottom: 1.4em;
+  color: #3498db;
+  cursor: pointer;
+  font-size: 1.3em;
+  font-weight: 800;
+  outline: none;
+  position: fixed;
+  right: 1.4em;
+  z-index: 1;
+}
+
+.arrowToTop:hover {
+  color: #3498db;
+  -webkit-transform: scale(1.3);
+  -moz-transform: scale(1.3);
+  -ms-transform: scale(1.3);
+  transform: scale(1.3);
+}
+
+/****** FOOTER ******/
+footer {
+  background-color: #282828;
+}
+
+footer a {
+  margin-bottom: 0.5em;
+}
+
+.btn-cp {
+  background-color: black;
+  color: white;
+}
+
+/* MEDIA QUERIES */
+@media (min-width: 740px) {
+  header {
+    background: url(../images/seaPS.jpg) center center fixed;
+    background-size: cover;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+  }
+  header div div {
+    color: black;
+    text-shadow: none;
+  }
+  .projects {
+    background: url(../images/codePS.jpg) center center fixed;
+    background-size: cover;
+  }
+}
+
+/* PRELOADER STYLING */
+/* This only works with JavaScript, 
+if it's not present, don't show loader */
+.no-js #loader {
+  display: none;
+}
+
+.js #loader {
+  display: block;
+  position: absolute;
+  left: 100px;
+  top: 0;
+}
+
+.loader-container {
+  background: black;
+  text-align: center;
+  height: 100vh;
+}
+
+.loader {
+  border: 16px solid rgba(220, 220, 220, 0.6);
+  border-top: 16px solid #3498db;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  animation: spin 2s linear infinite;
+  z-index: 9999;
+  margin: auto;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/****** NAVIGATION ******/
+.navbar {
+  background-color: #282828;
+  background: linear-gradient(to bottom, #282828 90%, rgba(220, 220, 220, 0.6));
+  box-shadow: 0 2px 5px #282828;
+  font-size: 1.2em;
+  position: fixed;
+  text-decoration: none;
+  width: 100%;
+}
+
+.navbar a {
+  color: gainsboro;
+  margin: 0 0.3em;
+  padding: 0.3em 0.8em;
+  text-decoration: none;
+  transition-duration: .7s;
+}
+
+nav a:hover {
+  box-shadow: inset 0 0 0 4px #3498db;
+  color: #3498db;
+}
+
+nav a:focus {
+  box-shadow: inset 0 0 0 24px #282828;
+}
+
+/****** ABOUT ********/
+.about {
+  background: #282828;
+  color: gainsboro;
+}
+
+.about img {
+  border: 3px solid #3498db;
+  margin-bottom: 1em;
+}
+
+.about ul {
+  padding: 0;
+}
+
+.about li {
+  list-style: none;
+}
+
+.skills-wrapper {
+  background-color: #282828;
+  border: 3px solid gainsboro;
+  margin-bottom: 1em;
+  padding: 0 0;
+  text-align: center;
+  width: 100%;
+}
+
+.skills-bar {
+  background-color: #3498db;
+  padding: 0.2em 0;
+  width: 0;
+}
+
+/****** PROJECTS ******/
+.projects {
+  background-color: #090909;
+  color: gainsboro;
+}
+
+figure {
+  border: 2px solid #3498db;
+  box-shadow: 10px 10px 6px 2px #090909;
+  display: inline-block;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+figcaption {
+  align-items: center;
+  background: black;
+  background: rgba(0, 0, 0, 0.7);
+  bottom: 0;
+  color: gainsboro;
+  display: flex;
+  /* For centering text inside .photo-overlay */
+  flex-direction: column;
+  font-size: 1em;
+  justify-content: center;
+  left: 0;
+  opacity: 0;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding: 1em 0.5em;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: all 0.6s ease;
+  -webkit-transition: all 0.6s ease;
+  -moz-transition: all 0.6s ease;
+  -o-transition: all 0.6s ease;
+}
+
+figure:hover figcaption {
+  opacity: 1;
+}
+
+.cap-bot:before {
+  bottom: 10px;
+  left: 10px;
+}
+
+.cap-bot figcaption {
+  bottom: -30%;
+  left: 0;
+}
+
+.cap-bot:hover figcaption {
+  bottom: 0;
+}
+
+.img-fluid {
+  background-size: cover;
+}
+/*# sourceMappingURL=style.css.map */

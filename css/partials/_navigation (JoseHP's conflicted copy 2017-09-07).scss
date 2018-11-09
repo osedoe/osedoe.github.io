@@ -1,0 +1,31 @@
+/****** NAVIGATION ******/
+
+.navbar {
+	background-color: $color_shark;
+	background: linear-gradient(
+		to bottom,
+		$color_shark 90%,
+		$color_dirty_white_60);
+	box-shadow: 0 2px 5px $color_shark;
+	font-size: 1.2em;
+	position: fixed;
+	text-decoration: none;
+	width: 100%;
+}
+
+.navbar a {
+	color: $color_dirty_white;
+	margin: 0 0.3em;
+	padding: 0.3em 0.8em;
+	text-decoration: none;
+	transition-duration: .7s;
+}
+
+nav a:hover {
+	box-shadow: inset 0 0 0 4px $color_light_blue;
+	color: $color_light_blue;
+}
+
+nav a:focus {
+	box-shadow: inset 0 0 0 24px $color_shark;
+}

@@ -1,0 +1,629 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"offset",
+				"offset-lg-2"
+			],
+			[
+				"off",
+				"offset-lg-2"
+			],
+			[
+				"hi",
+				"hidden-sm-up"
+			],
+			[
+				"text-",
+				"text-xs-center"
+			],
+			[
+				"text",
+				"text-xs-center"
+			],
+			[
+				"of",
+				"offset-xs-1"
+			],
+			[
+				"img",
+				"img\timg"
+			],
+			[
+				"r",
+				"row"
+			],
+			[
+				"list-grou",
+				"list-group-item"
+			],
+			[
+				"cl",
+				"class\tAttr"
+			],
+			[
+				"re",
+				"red-bg"
+			],
+			[
+				"tex",
+				"text-center"
+			],
+			[
+				"div",
+				"div\t<div>"
+			],
+			[
+				"col",
+				"col-md-offset-3"
+			],
+			[
+				"na",
+				"nav-item"
+			],
+			[
+				"col-sm",
+				"col-sm-2"
+			],
+			[
+				"a",
+				"a\t<a>"
+			],
+			[
+				"clas",
+				"class=〔attribute〕"
+			],
+			[
+				"se",
+				"section\t<section>"
+			],
+			[
+				"d",
+				"div\t<div>"
+			],
+			[
+				"hea",
+				"header\t<header>"
+			],
+			[
+				"links",
+				"links\tlink - stylesheet"
+			],
+			[
+				"fo",
+				"font-size"
+			],
+			[
+				"col-x",
+				"col-xs-offset-1"
+			],
+			[
+				"bo",
+				"bottom"
+			],
+			[
+				"transitio",
+				"transition-duration"
+			],
+			[
+				"margin",
+				"margin-right"
+			],
+			[
+				"transiti",
+				"transition-duration"
+			],
+			[
+				"borde",
+				"border-bottom"
+			],
+			[
+				"border",
+				"border"
+			],
+			[
+				"ta",
+				"table-caption"
+			],
+			[
+				"pa",
+				"padding"
+			],
+			[
+				"rg",
+				"rgba()"
+			],
+			[
+				"LIN",
+				"linear-gradient"
+			],
+			[
+				"font-s",
+				"font-size"
+			],
+			[
+				"rgb",
+				"rgb()"
+			],
+			[
+				"About",
+				"About"
+			],
+			[
+				"navb",
+				"navbar-collapse"
+			],
+			[
+				"navba",
+				"navbar-nav"
+			],
+			[
+				"ba",
+				"background-color"
+			],
+			[
+				"http",
+				"https"
+			],
+			[
+				"add",
+				"addClass〔function〕"
+			],
+			[
+				"func",
+				"function〔keyword〕"
+			],
+			[
+				"background-c",
+				"background-color"
+			],
+			[
+				"te",
+				"text-decoration"
+			],
+			[
+				"ma",
+				"margin-bottom"
+			],
+			[
+				"boun",
+				"bounceInRight"
+			],
+			[
+				"font",
+				"font-weight"
+			],
+			[
+				"container",
+				"container-fluid"
+			],
+			[
+				"bac",
+				"background-attachment"
+			],
+			[
+				"en",
+				"encryptedCharacter"
+			],
+			[
+				"nu",
+				"numberInput"
+			],
+			[
+				"pro",
+				"prompt〔function〕"
+			],
+			[
+				"u",
+				"ultra-expanded"
+			],
+			[
+				"fon",
+				"font-stretch"
+			],
+			[
+				"op",
+				"opacity"
+			],
+			[
+				"tra",
+				"transition"
+			],
+			[
+				"fa",
+				"fadeOut"
+			],
+			[
+				"fad",
+				"fadeOut〔function〕"
+			],
+			[
+				"fade",
+				"fadeIn"
+			],
+			[
+				"ov",
+				"overflow"
+			],
+			[
+				"tr",
+				"translateY()"
+			],
+			[
+				"al",
+				"align-self"
+			],
+			[
+				"to",
+				"top"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"fle",
+				"flex-direction"
+			],
+			[
+				"p",
+				"position"
+			],
+			[
+				"j",
+				"justify-content"
+			],
+			[
+				"di",
+				"display"
+			],
+			[
+				"inl",
+				"inline-block"
+			],
+			[
+				"flex",
+				"flex-wrap"
+			],
+			[
+				"im",
+				"important"
+			],
+			[
+				"pad",
+				"padding-bottom"
+			],
+			[
+				"m",
+				"margin-bottom"
+			],
+			[
+				"b",
+				"br\t<br>"
+			],
+			[
+				"mar",
+				"margin-top"
+			],
+			[
+				"alig",
+				"align-self"
+			],
+			[
+				"l",
+				"left"
+			],
+			[
+				"text-a",
+				"text-align"
+			],
+			[
+				"f",
+				"font-size"
+			],
+			[
+				"h",
+				"height"
+			],
+			[
+				"c",
+				"cover"
+			],
+			[
+				"v",
+				"vertical-align"
+			],
+			[
+				"max",
+				"maxlength\tAttr"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"padi",
+				"padding-top"
+			],
+			[
+				"min",
+				"min-height"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 368.0,
+		"last_filter": "in",
+		"selected_items":
+		[
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"csslinter",
+				"Preferences: SublimeLinter Settings – Default"
+			],
+			[
+				"rem",
+				"Package Control: Remove Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"live",
+				"LiveReload: Enable/disable plug-ins"
+			],
+			[
+				"re",
+				"Package Control: Remove Package"
+			],
+			[
+				"LiveReload: Enable/disable plugins",
+				"LiveReload: Enable/disable plug-ins"
+			],
+			[
+				"add li",
+				"LiveReload: Enable/disable plug-ins"
+			],
+			[
+				"",
+				"Package Control: Remove Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"packa",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 496.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/Jose/Documents/Web Dev/Projects/CoffeeShop/css/style.css",
+		"/C/Users/Jose/AppData/Roaming/Sublime Text 3/Packages/User/ColorHighlighter.sublime-settings",
+		"/C/Users/Jose/AppData/Roaming/Sublime Text 3/Packages/SublimeLinter/SublimeLinter.sublime-settings",
+		"/C/Users/Jose/AppData/Roaming/Sublime Text 3/Packages/User/SublimeLinter.sublime-settings",
+		"/C/WCFT/RetroWoW-Classic/World of Warcraft Classic/realmlist.wtf",
+		"/C/Users/Jose/Documents/Web Dev/Projects/Portfolio2/js/custom.js",
+		"/C/Users/Jose/Documents/Web Dev/Projects/Portfolio2/css/style.css",
+		"/C/Users/Jose/Documents/Web Dev/Projects/Portfolio2/index.html",
+		"/C/Users/Jose/AppData/Roaming/Sublime Text 3/Packages/User/SideBarEnhancements/Open With/Side Bar.sublime-menu",
+		"/C/Users/Jose/Documents/Web Dev/Ai/FinishWireframe.css",
+		"/C/Users/Jose/Documents/Web Dev/svg/demo1.svg",
+		"/C/Users/Jose/Documents/Web Dev/Projects/Portfolio2/css/bootstrap.css",
+		"/C/Users/Jose/Documents/Web Dev/Projects/GuessGame/guessGame.js",
+		"/C/Users/Jose/Documents/Web Dev/Algorythms Bonfires/2.js",
+		"/C/Users/Jose/Documents/Web Dev/ToolBox/scripts.js",
+		"/C/Users/Jose/Documents/Web Dev/Projects/Portfolio2/css/hover.css",
+		"/C/Users/Jose/Documents/Web Dev/Projects/Portfolio2/css/hover-min.css",
+		"/C/Users/Jose/Documents/Web Dev/Projects/EncrypCode/script.js",
+		"/C/Users/Jose/Documents/Web Dev/Projects/Portfolio2/css/animate.css",
+		"/C/Users/Jose/AppData/Roaming/Sublime Text 3/Packages/User/LiveReload.sublime-settings",
+		"/C/Users/Jose/Documents/Code and Scripts/encrpt.js",
+		"/C/Users/Jose/Documents/Web Dev/Projects/Portfolio2/js/jquery.js",
+		"/C/Users/Jose/Documents/Web Dev/Projects/Portfolio2/css/bootstrap-social.css",
+		"/C/Users/Jose/Documents/Web Dev/Projects/Portfolio2/js/bootstrap.js",
+		"/C/Users/Jose/Documents/Web Dev/Projects/Portfolio2/contact.php",
+		"/C/Users/Jose/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/C/Users/Jose/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap",
+		"/C/Users/Jose/AppData/Roaming/Sublime Text 3/Packages/Emmet/Default (Windows).sublime-keymap",
+		"/C/Users/Jose/AppData/Roaming/Sublime Text 3/Packages/User/Distraction Free.sublime-settings",
+		"/C/Users/Jose/AppData/Roaming/Sublime Text 3/Packages/LiveReload/LiveReload.sublime-settings",
+		"/C/Users/Jose/AppData/Roaming/Sublime Text 3/Packages/Browser Refresh/Default (Windows).sublime-keymap",
+		"/C/Users/Jose/AppData/Roaming/Sublime Text 3/Packages/Emmet/Emmet.sublime-settings",
+		"/C/Users/Jose/AppData/Roaming/Sublime Text 3/Packages/User/Emmet.sublime-settings",
+		"/C/Users/Jose/AppData/Roaming/Sublime Text 3/Packages/HTML-CSS-JS Prettify/Default (Windows).sublime-keymap",
+		"/C/Users/Jose/Documents/Web Dev/Projects/whatever.svg",
+		"/C/Users/Jose/AppData/Roaming/Sublime Text 3/Packages/HTML-CSS-JS Prettify/.jsbeautifyrc",
+		"/C/Users/Jose/AppData/Roaming/Sublime Text 3/Packages/HTML-CSS-JS Prettify/HTMLPrettify.sublime-settings",
+		"/C/Users/Jose/Documents/Web Dev/Projects/Portfolio2/js/bootstrap.min.js",
+		"/C/Users/Jose/Documents/Web Dev/Projects/Portfolio1/index.html",
+		"/C/Users/Jose/Documents/Web Dev/Projects/Portfolio2/css/bootstrap.min.css",
+		"/C/Users/Jose/Documents/Web Dev/Projects/Portfolio1/css/main.css",
+		"/C/Users/Jose/Documents/Web Dev/Projects/Portfolio1/js/custom.js",
+		"/C/Users/Jose/Documents/Web Dev/Projects/Portfolio1/css/style.css",
+		"/C/Users/Jose/Documents/Web Dev/Projects/Tribute Page - Muhammad Ali/index.html"
+	],
+	"find":
+	{
+		"height": 27.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+			"C:\\Users\\Jose\\Documents\\Web Dev\\Projects\\Portfolio2"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"danger",
+			"red",
+			"12",
+			"animated",
+			"btn-google",
+			"skill-",
+			"underl",
+			"hvr-p",
+			"fa-2x",
+			"hvr",
+			"hov",
+			"container-fluid",
+			"flex-item",
+			"transitions",
+			"transiti"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 55.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "index.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"css\\style.css"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 168.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

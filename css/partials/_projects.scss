@@ -1,0 +1,52 @@
+/****** PROJECTS ******/
+
+.projects {
+	background-color: $color_gray;
+	color: $color_dirty_white;
+}
+
+figure {
+	border: 2px solid $color_light_blue;
+	box-shadow: 10px 10px 6px 2px $color_gray;
+	display: inline-block;
+	height: 100%;
+	overflow: hidden;
+	position: relative;	
+	width: 100%;
+}
+
+figcaption {
+	align-items: center;
+	background: $black;
+	background: $black_70;
+	bottom: 0;
+	color: $color_dirty_white;
+	display: flex; /* For centering text inside .photo-overlay */
+	flex-direction: column;
+	font-size: 1em;
+	justify-content: center;
+	left: 0;
+	opacity: 0;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding: 1em 0.5em;
+	position: absolute;
+	right: 0;
+	top: 0;
+	transition: all 0.6s ease;
+		-webkit-transition: all 0.6s ease;
+  		-moz-transition:    all 0.6s ease;
+  		-o-transition:      all 0.6s ease;
+}
+
+figure:hover figcaption { opacity: 1; }
+
+.cap-bot:before { bottom: 10px; left: 10px; }
+
+.cap-bot figcaption { bottom: -30%; left: 0; }
+
+.cap-bot:hover figcaption { bottom: 0; }
+
+.img-fluid {
+	background-size: cover;
+}
