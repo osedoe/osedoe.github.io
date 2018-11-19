@@ -4,7 +4,11 @@
   "description": "portoflio website for jose diaz",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "parcel serve src/index.html --open",
+    "watch": "parcel watch src/index.html --global global",
+    "build": "rm -rf build/* && parcel build src/index.html -d build --global global --public-url /",
+    "clean:cache": "rm -rf .cache dist build",
+    "clean:all": "rm -rf node_modules package-lock.json .cache dist build"
   },
   "repository": {
     "type": "git",
@@ -24,5 +28,25 @@
   "bugs": {
     "url": "https://github.com/osedoe/osedoe.github.io/issues"
   },
-  "homepage": "https://github.com/osedoe/osedoe.github.io"
+  "homepage": "https://github.com/osedoe/osedoe.github.io",
+  "devDependencies": {
+    "@babel/cli": "^7.1.5",
+    "@babel/core": "^7.1.6",
+    "@babel/preset-env": "^7.1.6",
+    "@vue/component-compiler-utils": "^2.3.0",
+    "parcel-bundler": "^1.10.3",
+    "postcss-clean": "^1.1.0",
+    "postcss-easy-import": "^3.0.0",
+    "postcss-font-magician": "^2.2.1",
+    "postcss-preset-env": "^6.4.0",
+    "stylelint": "^9.8.0",
+    "stylelint-config-standard": "^18.2.0",
+    "tslint": "^5.11.0",
+    "typescript": "^3.1.6",
+    "vue-hot-reload-api": "^2.3.1",
+    "vue-template-compiler": "^2.5.17"
+  },
+  "dependencies": {
+    "vue": "^2.5.17"
+  }
 }
