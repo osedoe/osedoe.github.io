@@ -17,7 +17,7 @@
   --glass-yellow: rgba(255, 206, 0, 0.2);
 
   /* Typography */
-  --audiowide: "Audiowide", cursive;
+  --audiowide: "Audiowide", monospace;
   --exo2: "Exo 2", sans-serif;
 
   /* Misc */

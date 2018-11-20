@@ -1,15 +1,23 @@
 <template>
-   <header>
-        <Logo></Logo>
-        <Jumbotron></Jumbotron>
-    </header>
+
+  <header>
+    <Nav></Nav>
+    <Logo></Logo>
+    <Jumbotron></Jumbotron>
+  </header>
+
 </template>
 
+
 <script>
+
+import Nav from './Nav';
 import Logo from "./Logo";
 import Jumbotron from "./Jumbotron";
+
 export default {
   components: {
+    Nav,
     Logo,
     Jumbotron
   },
@@ -19,9 +27,12 @@ export default {
   computed: {},
   watch: {}
 };
+
 </script>
 
+
 <style>
+
 header {
   align-content: center;
   background: var(--dirty-white);
