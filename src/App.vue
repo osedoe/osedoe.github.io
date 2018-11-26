@@ -3,6 +3,36 @@
 </template>
 
 <style lang="postcss">
+/* ===== NORMALIZE CSS ===== */
+* {
+  background: transparent;
+  border: 0;
+  box-sizing: border-box;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+dl,
+pre,
+table {
+  margin: 0 0 1rem;
+}
+
+ul,
+ol,
+blockquote {
+  margin: 0 0 1rem 2rem;
+}
+
 /* ===== VARIABLES ===== */
 
 :root {
@@ -43,6 +73,7 @@ h6 {
 }
 
 body {
+  box-sizing: border-box;
   color: var(--black);
   font-family: var(--exo2);
   font-size: 1em;

@@ -21,11 +21,11 @@ export default {
     Logo,
     Jumbotron
   },
-  props: [],
-  data() {},
-  methods: {},
-  computed: {},
-  watch: {}
+  // props: [],
+  // data() {},
+  // methods: {},
+  // computed: {},
+  // watch: {}
 };
 
 </script>
@@ -39,7 +39,9 @@ header {
   background-size: 100%;
   display: grid;
   grid-template-columns: 1fr 3fr 1fr;
-  min-height: 800px;
+  height: 100vh;
+
+  /* TODO: Change positioning with grid layout */
   position: relative;
 }
 

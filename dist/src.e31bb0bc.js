@@ -8454,6 +8454,17 @@ var _default = {
       nav3: 'WORK',
       nav4: 'BLOG'
     };
+  },
+  methods: {
+    triggerMenu: function triggerMenu() {
+      console.log(this); // if (this.className.includes('active')) {
+      //     this.className = 'burger toggle';
+      //     this.nextSibling.className = '';
+      // } else {
+      //     this.className += ' active';
+      //     this.nextSibling.className += ' active';
+      // }
+    }
   }
 };
 exports.default = _default;
@@ -8470,7 +8481,11 @@ exports.default = _default;
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "nav-wrapper" }, [
-    _vm._m(0),
+    _c(
+      "div",
+      { staticClass: "burger toggle", on: { click: _vm.triggerMenu } },
+      [_c("span", { staticClass: "burger-mobile" })]
+    ),
     _vm._v(" "),
     _c("nav", [
       _c("ul", [
@@ -8501,16 +8516,7 @@ exports.default = _default;
     ])
   ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "burger toggle" }, [
-      _c("span", { staticClass: "burger-mobile" })
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
           return {
@@ -8739,12 +8745,12 @@ var _default = {
     Nav: _Nav.default,
     Logo: _Logo.default,
     Jumbotron: _Jumbotron.default
-  },
-  props: [],
-  data: function data() {},
-  methods: {},
-  computed: {},
-  watch: {}
+  } // props: [],
+  // data() {},
+  // methods: {},
+  // computed: {},
+  // watch: {}
+
 };
 exports.default = _default;
         var $0e1c0c = exports.default || module.exports;
@@ -8810,6 +8816,37 @@ var _Landing = _interopRequireDefault(require("./components/Landing"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -8973,7 +9010,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59360" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62955" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

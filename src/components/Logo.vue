@@ -11,6 +11,7 @@ export default {};
 
 <style lang="postcss">
 .logo-wrapper {
+  /* TODO: Change positioning with grid layout */
   position: absolute;
   top: 0;
   left: 0;
@@ -30,7 +31,7 @@ export default {};
 
 @media (min-width: 768px) {
   .logo-wrapper {
-    top: 40px;
+    top: 20px;
     left: 40px;
 
     & .logo-mobile {

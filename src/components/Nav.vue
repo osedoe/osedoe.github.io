@@ -1,6 +1,6 @@
 <template>
   <div class="nav-wrapper">
-        <div class="burger toggle">
+        <div v-on:click="triggerMenu" class="burger toggle">
             <span class="burger-mobile"></span>
         </div>
         <nav>
@@ -24,14 +24,24 @@
 
 <script>
 export default {
-  data() {
-    return {
-      nav1: 'HOME',
-      nav2: 'ABOUT',
-      nav3: 'WORK',
-      nav4: 'BLOG'
+    data() {
+        return {
+          toggle: false,
+          nav: ['HOME', 'ABOUT', 'WORK', 'BLOG']
+        };
+    },
+    methods: {
+        triggerMenu: function() {
+          console.log(this);
+            // if (this.className.includes('active')) {
+            //     this.className = 'burger toggle';
+            //     this.nextSibling.className = '';
+            // } else {
+            //     this.className += ' active';
+            //     this.nextSibling.className += ' active';
+            // }
+        }
     }
-  }
 };
 </script>
 
@@ -46,8 +56,9 @@ export default {
 }
 
 .burger {
-  background: $black;
-  border: 4px solid var(--dirty-white);
+  background: var(--black);
+
+  /* border: 4px solid var(--dirty-white); */
   height: 80px;
   width: 80px;
   position: absolute;
@@ -71,7 +82,7 @@ export default {
   }
 
   & .burger-mobile::before {
-    content: "";
+    content: '';
     position: absolute;
     width: 100%;
     height: 100%;
@@ -85,7 +96,7 @@ export default {
   }
 
   & .burger-mobile::after {
-    content: "";
+    content: '';
     position: absolute;
     width: 100%;
     height: 100%;
@@ -119,8 +130,10 @@ export default {
 }
 
 nav {
-  background: $black;
+  background: var(--black);
   color: var(--dirty-white);
+
+  /* TODO: Change positioning with grid layout */
   position: absolute;
   top: 0;
   right: 0;
