@@ -8449,15 +8449,19 @@ exports.default = void 0;
 var _default = {
   data: function data() {
     return {
-      nav1: 'HOME',
-      nav2: 'ABOUT',
-      nav3: 'WORK',
-      nav4: 'BLOG'
+      toggle: false,
+      nav: {
+        home: 'HOME',
+        about: 'ABOUT',
+        work: 'WORK',
+        blog: 'BLOG'
+      }
     };
   },
   methods: {
     triggerMenu: function triggerMenu() {
-      console.log(this); // if (this.className.includes('active')) {
+      this.toggle = !this.toggle;
+      console.log(this.toggle); // if (this.className.includes('active')) {
       //     this.className = 'burger toggle';
       //     this.nextSibling.className = '';
       // } else {
@@ -8483,33 +8487,37 @@ exports.default = _default;
   return _c("div", { staticClass: "nav-wrapper" }, [
     _c(
       "div",
-      { staticClass: "burger toggle", on: { click: _vm.triggerMenu } },
+      {
+        staticClass: "burger toggle",
+        class: { active: _vm.toggle },
+        on: { click: _vm.triggerMenu }
+      },
       [_c("span", { staticClass: "burger-mobile" })]
     ),
     _vm._v(" "),
-    _c("nav", [
+    _c("nav", { class: { active: _vm.toggle } }, [
       _c("ul", [
         _c("li", [
           _c("a", { attrs: { href: "#" } }, [
-            _vm._v(" " + _vm._s(_vm.nav1) + " ")
+            _vm._v(" " + _vm._s(_vm.nav.home) + " ")
           ])
         ]),
         _vm._v(" "),
         _c("li", [
           _c("a", { attrs: { href: "#" } }, [
-            _vm._v(" " + _vm._s(_vm.nav2) + " ")
+            _vm._v(" " + _vm._s(_vm.nav.about) + " ")
           ])
         ]),
         _vm._v(" "),
         _c("li", [
           _c("a", { attrs: { href: "#" } }, [
-            _vm._v(" " + _vm._s(_vm.nav3) + " ")
+            _vm._v(" " + _vm._s(_vm.nav.work) + " ")
           ])
         ]),
         _vm._v(" "),
         _c("li", [
           _c("a", { attrs: { href: "#" } }, [
-            _vm._v(" " + _vm._s(_vm.nav4) + " ")
+            _vm._v(" " + _vm._s(_vm.nav.blog) + " ")
           ])
         ])
       ])
@@ -9010,7 +9018,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62955" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62840" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

@@ -1,21 +1,21 @@
 <template>
   <div class="nav-wrapper">
-        <div v-on:click="triggerMenu" class="burger toggle">
+        <div @click="triggerMenu" class="burger toggle" :class="{ active: toggle }">
             <span class="burger-mobile"></span>
         </div>
-        <nav>
+        <nav :class="{ active: toggle }">
             <ul>
                 <li>
-                    <a href="#"> {{ nav1 }} </a>
+                    <a href="#"> {{ nav.home }} </a>
                 </li>
                 <li>
-                    <a href="#"> {{ nav2 }} </a>
+                    <a href="#"> {{ nav.about }} </a>
                 </li>
                 <li>
-                    <a href="#"> {{ nav3 }} </a>
+                    <a href="#"> {{ nav.work }} </a>
                 </li>
                 <li>
-                    <a href="#"> {{ nav4 }} </a>
+                    <a href="#"> {{ nav.blog }} </a>
                 </li>
             </ul>
         </nav>
@@ -27,12 +27,21 @@ export default {
     data() {
         return {
           toggle: false,
-          nav: ['HOME', 'ABOUT', 'WORK', 'BLOG']
+          nav: {
+            home: 'HOME',
+            about: 'ABOUT',
+            work: 'WORK',
+            blog: 'BLOG'
+            }
         };
     },
     methods: {
         triggerMenu: function() {
-          console.log(this);
+          this.toggle = !this.toggle;
+          console.log(this.toggle);
+
+
+
             // if (this.className.includes('active')) {
             //     this.className = 'burger toggle';
             //     this.nextSibling.className = '';
