@@ -3,15 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@types/react": "^16.7.18",
+    "@types/react-dom": "^16.0.11",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-scripts": "2.1.2"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "build": "webpack",
+    "start": "node dist/bundle.js",
+    "dev": "webpack-dev-server --mode development"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -21,5 +22,41 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "@types/enzyme": "^3.1.15",
+    "@types/jest": "^23.3.10",
+    "@types/node": "^10.12.18",
+    "@types/webpack": "^4.4.22",
+    "enzyme": "^3.8.0",
+    "enzyme-adapter-react-16": "^1.7.1",
+    "jest": "^23.6.0",
+    "jest-css-modules": "^1.1.0",
+    "ts-jest": "^23.10.5",
+    "typescript": "^3.2.2",
+    "webpack": "^4.28.2",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.14"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.(ts|tsx)$": "<rootDir>/config/jest/preprocessor.js"
+    },
+    "testPathIgnorePatterns": [
+      "/node_modules/"
+    ],
+    "testRegex": "(/test/.*|\\.(test|spec))\\.(ts|tsx|js)$",
+    "moduleNameMapper": {
+      "\\.(css|jpg|png|svg)$": "<rootDir>/node_modules/jest-css-modules"
+    },
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "json"
+    ],
+    "setupFiles": [
+      "<rootDir>/config/jest/setup.js"
+    ]
+  }
 }
