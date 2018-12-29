@@ -2,8 +2,7 @@ import React from 'react';
 // import styled from 'react-emotion';
 import Logo from './../components/Logo';
 import Nav from './../components/Nav';
-import Jumbotron from './../components/Jumbotron';
-import Arrow from './../components/Arrow';
+import ArrowDown from './../components/ArrowDown';
 
 interface LandingProps {
 }
@@ -12,7 +11,7 @@ interface LandingState {
 }
 
 export default class Landing extends React.Component<LandingProps, LandingState> {
-    constructor(props) {
+    constructor(props: string) {
         super(props);
         this.state = {
             heading: 'I\'m Jose. A Full Stack Developer from the Canary Islands'
@@ -24,7 +23,7 @@ export default class Landing extends React.Component<LandingProps, LandingState>
             <Logo />
             <Nav />
             {this.state.heading}
-            <Arrow />
+            <ArrowDown />
         </div>
     }
 }

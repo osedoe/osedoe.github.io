@@ -12,7 +12,7 @@ interface LogoState {
 export default class Logo extends React.Component<LogoProps, LogoState> {
     render() {
         return <div>
-            Logo
+            <img src='#' alt='Jose Diaz' />
         </div>
     }
 }
