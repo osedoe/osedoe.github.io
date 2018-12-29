@@ -1,11 +1,22 @@
-import * as React from 'react';
+import React from 'react';
+import Landing from './pages/Landing';
 
-export default class App extends React.Component {
+interface AppProps {
+
+}
+
+interface appState {
+
+}
+
+class App extends React.Component {
   render() {
     return (
       <div className="App">
-        hola
+        <Landing />
       </div>
     );
   }
 }
+
+export default App;

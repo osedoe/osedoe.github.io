@@ -1,13 +1,13 @@
-import * as React from 'react';
+import React from 'react';
 import { shallow } from 'enzyme';
-import * as App from '../src/App';
+import App from './../src/App';
 
 describe('App', () => {
   describe('Render', () => {
-    it('it should render an App component', () => {
+    it('should render an App Component', () => {
       const wrapper = shallow(<App />);
-      const app = wrapper.exists();
-      expect(app).toBe(true);
+      const appComponent = wrapper.exists();
+      expect(appComponent).toBe(true);
     });
   });
 });
