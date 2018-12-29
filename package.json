@@ -24,16 +24,19 @@
     "not op_mini all"
   ],
   "devDependencies": {
+    "@emotion/core": "^10.0.5",
     "@types/enzyme": "^3.1.15",
     "@types/jest": "^23.3.10",
     "@types/node": "^10.12.18",
     "@types/react": "^16.7.18",
     "@types/react-dom": "^16.0.11",
     "@types/webpack": "^4.4.22",
+    "emotion": "^10.0.5",
     "enzyme": "^3.8.0",
     "enzyme-adapter-react-16": "^1.7.1",
     "jest": "^23.6.0",
     "jest-css-modules": "^1.1.0",
+    "react-emotion": "^10.0.0",
     "ts-jest": "^23.10.5",
     "typescript": "^3.2.2"
   },

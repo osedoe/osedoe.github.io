@@ -1,22 +1,20 @@
 import React from 'react';
 import Landing from './pages/Landing';
+import css from 'emotion';
+
+const style = 'black';
 
 interface AppProps {
-
+}
+interface AppState {
 }
 
-interface appState {
-
-}
-
-class App extends React.Component {
+export default class App extends React.Component<AppProps, AppState> {
   render() {
     return (
-      <div className="App">
+      <div>
         <Landing />
       </div>
     );
   }
 }
-
-export default App;
