@@ -1,6 +1,8 @@
 import React from 'react';
+// import css from 'emotion';
 import Landing from './pages/Landing';
-import css from 'emotion';
+import About from './pages/About';
+
 
 const style = 'black';
 
@@ -14,6 +16,7 @@ export default class App extends React.Component<AppProps, AppState> {
     return (
       <div>
         <Landing />
+        <About />
       </div>
     );
   }

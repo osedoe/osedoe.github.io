@@ -1,10 +1,17 @@
 import React from 'react';
-import styled from 'react-emotion';
 
 interface AboutTextProps {
 
 }
 
 interface AboutTextState {
-    
+
+}
+
+export default class AboutText extends React.Component {
+    render() {
+        return <div>
+            BLUBLU
+        </div>
+    }
 }
