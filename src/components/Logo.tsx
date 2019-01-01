@@ -2,21 +2,21 @@ import React from 'react';
 import styled from '@emotion/styled';
 
 const LogoWrapper = styled.div`
-    background: red;
+    background: rgb(29, 32, 41);
+    color: white;
+    display: grid;
+    height: 60px;
+    width: 120px;
 `;
 
-interface LogoProps{
+const LogoImg = styled.img`
+    place-self: center;
+`;
 
-}
-
-interface LogoState {
-
-}
-
-export default class Logo extends React.Component<LogoProps, LogoState> {
+export default class Logo extends React.Component<{},{}> {
     render() {
         return <LogoWrapper>
-            <img src='#' alt='Jose Diaz' />
+            <LogoImg src='#' alt='JD' />
         </LogoWrapper>
     }
 }

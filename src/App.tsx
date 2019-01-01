@@ -1,10 +1,12 @@
 import React from 'react';
-// import css from 'emotion';
+import styled from '@emotion/styled';
 import Landing from './pages/Landing';
 import About from './pages/About';
 
-
-const style = 'black';
+const Container = styled.div`
+  display: grid;
+  grid-template-columns: 1fr;
+`;
 
 interface AppProps {
 }
@@ -14,10 +16,10 @@ interface AppState {
 export default class App extends React.Component<AppProps, AppState> {
   render() {
     return (
-      <div>
+      <Container>
         <Landing />
         <About />
-      </div>
+      </Container>
     );
   }
 }

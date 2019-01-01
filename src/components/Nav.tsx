@@ -1,8 +1,20 @@
 import React from 'react';
+import styled from '@emotion/styled';
 
-interface NavProps {
+const NavWrapper = styled.div`
+    grid-column: 3/4;
+    grid-row: 1/2;
+    align-self: end;
+`;
 
-}
+const NavBurger = styled.div`
+    
+`;
+
+const NavMenu = styled.div`
+    display: none;
+    position: absolute;
+`;
 
 interface NavState {
     navTitle: string;
@@ -10,7 +22,7 @@ interface NavState {
     navigation: string[];
 }
 
-export default class Nav extends React.Component<NavProps, NavState> {
+export default class Nav extends React.Component<{}, NavState> {
     constructor(props: string) {
         super(props);
         this.state = {
@@ -33,13 +45,13 @@ export default class Nav extends React.Component<NavProps, NavState> {
 
     render() {
         const { navTitle, navigation } = this.state;
-        return <div onClick={this.toggleNav}>
-            <div>
+        return <NavWrapper onClick={this.toggleNav}>
+            <NavBurger>
                 {navTitle}
-            </div>
-            <nav>
-                {navigation.map(li=> `${li}  `)}
-            </nav>
-        </div>
+            </NavBurger>
+            <NavMenu>
+                {navigation.map(li => `${li}  `)}
+            </NavMenu>
+        </NavWrapper>
     }
 }
