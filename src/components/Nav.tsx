@@ -2,13 +2,18 @@ import React from 'react';
 import styled from '@emotion/styled';
 
 const NavWrapper = styled.div`
-    grid-column: 3/4;
-    grid-row: 1/2;
-    align-self: end;
 `;
 
 const NavBurger = styled.div`
-    
+    background: black;
+    border: 3px solid black;
+    color: white;
+    font-family: Audiowide;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: 120px;
 `;
 
 const NavMenu = styled.div`

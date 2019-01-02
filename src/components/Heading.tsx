@@ -1,18 +1,19 @@
-    import React from 'react';
+import React from 'react';
+import styled from '@emotion/styled';
+
+const HeadingBefore = styled.span`
+
+`;
 
 interface HeadingProps {
     title: string;
 }
 
-interface HeadingState {
-
-}
-
-export default class Heading extends React.Component<HeadingProps, HeadingState> {
+export default class Heading extends React.Component<HeadingProps, {}> {
     render() {
         const { title } = this.props;
         return <div>
-            {title}
+            <span>{title}</span>
         </div>
     }
 }
