@@ -5,6 +5,7 @@ import Header from './components/Header';
 import Landing from './pages/Landing';
 import About from './pages/About';
 import Work from './pages/Work';
+import './App.css';
 
 const Container = styled.div`
   display: grid;
