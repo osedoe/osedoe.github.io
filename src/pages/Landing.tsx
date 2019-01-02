@@ -6,35 +6,41 @@ import styled from '@emotion/styled';
 
 const LandingWrapper = styled.div`
     display: grid;
-    grid-template-columns: 120px 1fr 120px;
-    grid-template-rows: 60px 1fr 300px;
+    grid-template-columns: 3fr 1fr 3fr;
+    grid-template-rows: 3fr 1fr;
     height: 100vh;
 `;
 
 const Jumbotron = styled.div`
+    font-family: audiowide;
     grid-row: 2/3;
-    grid-column: 2/3;
+    grid-column: 3/4;
     align-self: end;
     justify-self: end;
+    margin: 2em;
 `;
 
 interface LandingState {
-    heading: string;
+    heading1: string;
+    heading2: string;
+    heading3: string;
 }
 
 export default class Landing extends React.Component<{}, LandingState> {
     constructor(props: string) {
         super(props);
         this.state = {
-            heading: 'I\'m Jose. A Full Stack Developer from the Canary Islands'
+            heading1: 'Hola.',
+            heading2: `I'm Jose`,
+            heading3: `A Full Stack Developer from the Canary Islands`
         }
     }
     render() {
         return <LandingWrapper>
-            <Logo />
-            <Nav />
             <Jumbotron>
-                {this.state.heading}
+                <h1>{this.state.heading1}</h1>
+                <h2>{this.state.heading2}</h2>
+                <h2>{this.state.heading3}</h2>
             </Jumbotron>
             <ArrowDown />
         </LandingWrapper>

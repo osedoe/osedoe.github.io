@@ -8,7 +8,6 @@ interface AboutProps {
 
 interface AboutState {
     sectionTitle: string;
-
 }
 
 export default class About extends React.Component<AboutProps, AboutState> {
