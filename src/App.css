@@ -1,0 +1,11 @@
+:root {
+    --black: rgb(29, 32, 41);
+    --white: rgb(245, 245, 245);
+    --blue: rgb(0, 135, 255);
+    --yellow: rgb(249, 205, 70);
+}
+
+a:visited {
+    color: var(--blue);
+    text-decoration: none;
+}
