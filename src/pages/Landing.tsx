@@ -7,7 +7,7 @@ import styled from '@emotion/styled';
 const LandingWrapper = styled.div`
     display: grid;
     grid-template-columns: 3fr 1fr 3fr;
-    grid-template-rows: 3fr 1fr;
+    grid-template-rows: 3fr 1fr 2fr;
     height: 100vh;
 `;
 
@@ -17,7 +17,8 @@ const Jumbotron = styled.div`
     grid-column: 3/4;
     align-self: end;
     justify-self: end;
-    margin: 2em;
+    margin: 1em 4em 1em 1em;
+    padding: 1em;
 `;
 
 interface LandingState {
@@ -36,13 +37,13 @@ export default class Landing extends React.Component<{}, LandingState> {
         }
     }
     render() {
+        const { heading1, heading2, heading3 } = this.state;
         return <LandingWrapper>
             <Jumbotron>
-                <h1>{this.state.heading1}</h1>
-                <h2>{this.state.heading2}</h2>
-                <h2>{this.state.heading3}</h2>
+                <h1>{heading1}</h1>
+                <h2>{heading2}</h2>
+                <h2>{heading3}</h2>
             </Jumbotron>
-            <ArrowDown />
         </LandingWrapper>
     }
 }
