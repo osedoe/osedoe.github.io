@@ -1,6 +1,13 @@
 import React from 'react';
-// import styled from 'react-emotion';
 import Heading from './../components/Heading';
+import styled from '@emotion/styled';
+
+const AboutWrapper = styled.div`
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+`;
 
 interface AboutProps {
 
@@ -20,8 +27,9 @@ export default class About extends React.Component<AboutProps, AboutState> {
     
     render() {
         const { sectionTitle } = this.state;
-        return <div>
+        return <AboutWrapper>
             <Heading title={sectionTitle} />
-        </div>
+            <p> Hola </p>
+        </AboutWrapper>
     }
 }
