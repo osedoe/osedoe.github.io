@@ -1,16 +1,22 @@
 import React from 'react';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import styled from '@emotion/styled';
+import './Nav.css';
 
 const NavBurger = styled.div`
     background: rgb(29, 32, 41);
-    border: 3px solid rgb(29, 32, 41);
+    border: 3px solid white;
     color: white;
     font-family: Audiowide;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: absolute;
+    right: 0;
+    top: 0;
     height: 60px;
     width: 120px;
+    z-index: 1;
 `;
 
 const NavMenu = styled.div`
@@ -18,7 +24,7 @@ const NavMenu = styled.div`
     color: white;
     font-family: Audiowide;
     font-size: 2em;
-    display: none;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -27,7 +33,7 @@ const NavMenu = styled.div`
     top: 0;
     list-style: none;
     height: 100vh;
-    width: 30vw;
+    width: 0;
 `;
 
 const MenuItem = styled.li`
@@ -65,15 +71,22 @@ export default class Nav extends React.Component<{}, NavState> {
         const currentState = this.state.display;
         this.setState({ display: !currentState });
     }
-
+    
     render() {
-        const { navTitle, navigation } = this.state;
-        return <nav onClick={this.toggleNav}>
-            <NavBurger>
+        const { navTitle, navigation, display } = this.state;
+        return <nav>
+            <NavBurger onClick={this.toggleNav}>
                 {navTitle}
+                <div className={display ? 'burger active' : 'burger'}></div>
             </NavBurger>
-            <NavMenu>
-                {navigation.map(item => <MenuItem key={item}>{item}</MenuItem>)}
+            <NavMenu className={display ? 'menu active' : 'menu'}>
+                {navigation.map(item => {
+                    return <MenuItem key={item}>
+                        <Link to={item}>
+                            {item}
+                        </Link>
+                    </MenuItem>
+                })}
             </NavMenu>
         </nav>
     }
