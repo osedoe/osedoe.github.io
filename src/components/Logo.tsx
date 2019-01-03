@@ -2,8 +2,8 @@ import React from 'react';
 import styled from '@emotion/styled';
 
 const LogoWrapper = styled.div`
-    background: rgb(29, 32, 41);
-    border: 4px solid white;
+    background: var(--black);
+    border: 3px solid white;
     color: white;
     display: grid;
     font-family: Audiowide;
@@ -13,11 +13,11 @@ const LogoWrapper = styled.div`
 `;
 
 const Span1 = styled.span`
-    color: rgb(0, 135, 255);
+    color: var(--blue);
 `;
 
 const Span2 = styled.span`
-    color: rgb(249, 205, 70);
+    color: var(--yellow);
 `;
 
 export default class Logo extends React.Component<{},{}> {
