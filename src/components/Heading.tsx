@@ -4,6 +4,7 @@ import styled from '@emotion/styled';
 const Base = styled.div`
     background: var(--black);
     position: relative;
+    margin-top: 4em;
     height: 85px;
     width: 140px;
 `;
