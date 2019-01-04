@@ -50,6 +50,7 @@
 }
 
 .menu.active {
+    border-left: 3px solid var(--white);
     opacity: 1;
     transition: all .5s ease-in-out;
     width: 450px;
