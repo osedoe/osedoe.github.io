@@ -28,11 +28,7 @@ interface AboutTextProps {
     text: string;
 }
 
-interface AboutTextState {
-
-}
-
-export default class AboutText extends React.Component<AboutTextProps, AboutTextState> {
+export default class AboutText extends React.Component<AboutTextProps> {
     render() {
         const { subtitle, text } = this.props;
         return <Div>
