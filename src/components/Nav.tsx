@@ -4,8 +4,8 @@ import styled from '@emotion/styled';
 import './Nav.css';
 
 const NavBurger = styled.div`
-    background: rgb(29, 32, 41);
-    border: 3px solid white;
+    background: var(--black);
+    border: 3px solid var(--white);
     color: white;
     font-family: Audiowide;
     display: flex;
@@ -20,7 +20,7 @@ const NavBurger = styled.div`
 `;
 
 const NavMenu = styled.div`
-    background: rgb(29, 32, 41);
+    background: var(--black);
     color: white;
     font-family: Audiowide;
     font-size: 2em;

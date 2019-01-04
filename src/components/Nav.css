@@ -50,13 +50,15 @@
 }
 
 .menu.active {
-    border-left: 3px solid var(--white);
+    box-shadow: -3px 0 8px black;
+    color: var(--white);
     opacity: 1;
+    position: absolute;
     transition: all .5s ease-in-out;
     width: 450px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1000px) {
     .menu.active {
         width: 100vw;
     }
