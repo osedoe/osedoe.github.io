@@ -7,6 +7,7 @@ const Base = styled.div`
     margin-top: 4em;
     height: 85px;
     width: 140px;
+    z-index: 1;
 `;
 
 const BlueBox = styled.span`
@@ -19,6 +20,7 @@ const BlueBox = styled.span`
     bottom: 30%;
     padding: 1em 1.5em .5em .1em;
     width: 65%;
+    z-index: 1;
 `;
 
 const WhiteBox = styled.span`
@@ -28,7 +30,7 @@ const WhiteBox = styled.span`
     left: 10%;
     height: 60%;
     width: 80%;
-    z-index: 3;
+    z-index: 2;
 `;
 
 const YellowBox = styled.span`
@@ -38,7 +40,7 @@ const YellowBox = styled.span`
     left: 4%;
     height: 60%;
     width: 80%;
-    z-index: 2;
+    z-index: 1;
 `;
 
 interface HeadingProps {

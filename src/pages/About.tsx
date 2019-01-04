@@ -27,6 +27,13 @@ const TextWrapper = styled.div`
     margin: .5em 3em;
 `;
 
+const SubHeading = styled.h3`
+    color: var(--blue);
+    font-family: audiowide;
+    padding: .3em;
+    margin: .1em;
+`;
+
 interface AboutState {
     sectionTitle: string;
     sectionSubtitles: string[];
@@ -69,7 +76,10 @@ export default class About extends React.Component<{}, AboutState> {
                 <AboutText subtitle={sectionSubtitles[0]} text={sectionText[0]} />
                 <AboutText subtitle={sectionSubtitles[1]} text={sectionText[1]} />
                 <AboutText subtitle={sectionSubtitles[2]} text={sectionText[2]} />
-                <AboutTable elements={sectionSkills}/>
+                <div>
+                    <SubHeading>{sectionSubtitles[3]}</SubHeading>
+                    <AboutTable elements={sectionSkills}/>
+                </div>
             </TextWrapper>
         </AboutWrapper>
     }
