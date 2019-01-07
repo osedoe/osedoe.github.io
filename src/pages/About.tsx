@@ -8,8 +8,7 @@ const AboutWrapper = styled.div`
     background: var(--black);
     color: var(--white);
     display: grid;
-    grid-template-columns: 3fr 2fr;
-    grid-template-rows: 1fr 6fr 1fr;
+    grid-template-columns: 4fr 3fr;
     grid-gap: 1em;
     justify-content: center;
 `;
@@ -21,10 +20,7 @@ const HeadingWrapper = styled.div`
 `;
 
 const TextWrapper = styled.div`
-    display: grid;
-    grid-template-rows: repeat(4, 1fr);
-    padding: 1em;
-    margin: .5em 3em;
+    margin: .5em 1.5em;
 `;
 
 const SubHeading = styled.h3`
@@ -32,6 +28,13 @@ const SubHeading = styled.h3`
     font-family: audiowide;
     padding: .3em;
     margin: .1em;
+`;
+
+const TableWrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+    margin: .3em;
+    padding: .3em;
 `;
 
 interface AboutState {
@@ -76,10 +79,10 @@ export default class About extends React.Component<{}, AboutState> {
                 <AboutText subtitle={sectionSubtitles[0]} text={sectionText[0]} />
                 <AboutText subtitle={sectionSubtitles[1]} text={sectionText[1]} />
                 <AboutText subtitle={sectionSubtitles[2]} text={sectionText[2]} />
-                <div>
+                <TableWrapper>
                     <SubHeading>{sectionSubtitles[3]}</SubHeading>
                     <AboutTable elements={sectionSkills}/>
-                </div>
+                </TableWrapper>
             </TextWrapper>
         </AboutWrapper>
     }

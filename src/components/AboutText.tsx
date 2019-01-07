@@ -18,7 +18,7 @@ const SubHeading = styled.h3`
 
 const Paragraph = styled.p`
     font-family: 'Exo 2';
-    padding: .5em 4em .5em .5em;
+    padding: .5em 2em .5em .5em;
     margin: .1em;
     text-align: justify;
 `;

@@ -3,8 +3,8 @@ import styled from '@emotion/styled';
 
 const Table = styled.table`
     font-family: 'Exo 2';
-    margin: .6em;
-    padding: .6em;
+    margin: .3em;
+    padding: .3em;
 `;
 
 interface AboutTableProps {

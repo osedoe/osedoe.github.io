@@ -8,6 +8,7 @@ const HeaderWrapper = styled.div`
     justify-content: space-between;
     position: fixed;
     width: 100vw;
+    z-index: 4;
 `;
 
 export default class Header extends React.Component {
