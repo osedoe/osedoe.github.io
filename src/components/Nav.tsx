@@ -1,6 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import styled from '@emotion/styled';
+import { inject, observer } from 'mobx-react';
+import { NavStore } from '../stores/NavStore';
 import './Nav.css';
 
 const NavBurger = styled.div`
@@ -45,37 +47,17 @@ const MenuItem = styled.li`
     width: 160px;
 `;
 
-interface NavState {
-    navTitle: string;
-    display: boolean;
-    navigation: string[];
+interface NavProps {
+    navStore?: NavStore;
 }
 
-export default class Nav extends React.Component<{}, NavState> {
-    constructor(props: string) {
-        super(props);
-        this.state = {
-            navTitle: 'Menu',
-            display: false,
-            navigation: [
-                'home',
-                'about',
-                'work',
-                'blog'
-            ]
-        }
-        this.toggleNav = this.toggleNav.bind(this);
-    }
-
-    toggleNav() {
-        const currentState = this.state.display;
-        this.setState({ display: !currentState });
-    }
-    
+@inject('navStore')
+@observer
+export default class Nav extends React.Component<NavProps, {}> {
     render() {
-        const { navTitle, navigation, display } = this.state;
+        const { navTitle, navigation, display, toggleNav } = this.props.navStore!;
         return <nav>
-            <NavBurger onClick={this.toggleNav}>
+            <NavBurger onClick={toggleNav}>
                 {navTitle}
                 <div className={display ? 'burger active' : 'burger'}></div>
             </NavBurger>

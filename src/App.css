@@ -5,7 +5,11 @@
     --yellow: rgb(249, 205, 70);
 }
 
-a:visited {
+a {
     color: var(--white);
+}
+
+a:visited {
+    color: inherit;
     text-decoration: none;
 }
