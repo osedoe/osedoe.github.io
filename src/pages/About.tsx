@@ -2,6 +2,7 @@ import React from 'react';
 import Heading from './../components/Heading';
 import AboutText from './../components/AboutText';
 import AboutTable from './../components/AboutTable';
+import AboutAvatar from './../components/AboutAvatar';
 import styled from '@emotion/styled';
 import { inject, observer } from 'mobx-react';
 import { AboutStore } from './../stores/AboutStore';
@@ -61,6 +62,7 @@ export default class About extends React.Component<AboutProps, {}> {
                     <AboutTable elements={sectionSkills}/>
                 </TableWrapper>
             </TextWrapper>
+            <AboutAvatar />
         </AboutWrapper>
     }
 }
