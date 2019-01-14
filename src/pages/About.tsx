@@ -59,10 +59,10 @@ export default class About extends React.Component<AboutProps, {}> {
                 <AboutText subtitle={sectionSubtitles[2]} text={sectionTexts[2]} />
                 <TableWrapper>
                     <SubHeading>{sectionSubtitles[3]}</SubHeading>
-                    <AboutTable elements={sectionSkills}/>
+                    <AboutTable elements={sectionSkills} />
                 </TableWrapper>
             </TextWrapper>
             <AboutAvatar />
-        </AboutWrapper>
+        </AboutWrapper>;
     }
 }
