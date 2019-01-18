@@ -11,6 +11,7 @@ const AboutWrapper = styled.div`
     background: var(--black);
     color: var(--white);
     display: grid;
+    height: 100%;
     grid-template-columns: 4fr 3fr;
     grid-gap: 1em;
     justify-content: center;
