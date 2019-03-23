@@ -9,7 +9,7 @@ const NavBurger = styled.div`
     background: var(--black);
     border: 3px solid var(--white);
     color: white;
-    font-family: Audiowide;
+    font-family: Audiowide, monospace;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -31,7 +31,7 @@ const NavMenu = styled.div`
     color: white;
     display: flex;
     flex-direction: column;
-    font-family: Audiowide;
+    font-family: Audiowide, monospace;
     font-size: 2em;
     height: 100vh;
     justify-content: center;
@@ -63,12 +63,12 @@ export default class Nav extends React.Component<NavProps, {}> {
     return <nav>
       <NavBurger onClick={toggleNav}>
         <NavCopy>{navTitle}</NavCopy>
-        <div className={display ? 'burger active' : 'burger'}></div>
+        <span className={display ? 'burger active' : 'burger'}/>
       </NavBurger>
       <NavMenu className={display ? 'menu active' : 'menu'}>
         {navigation.map(item => {
           return <MenuItem key={item}>
-            <Link to={item}>
+            <Link to={item} onClick={toggleNav}>
               {item}
             </Link>
           </MenuItem>;
