@@ -42,7 +42,7 @@
     "no-empty-interface": false,
     "no-default-export": false,
     "no-import-side-effect": [
-      true
+      false
     ],
     "no-inferrable-types": [
       true,
