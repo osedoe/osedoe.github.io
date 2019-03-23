@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 import styled from '@emotion/styled';
 import { inject, observer } from 'mobx-react';
 import { NavStore } from '../stores/NavStore';
@@ -52,28 +52,28 @@ const MenuItem = styled.li`
 `;
 
 interface NavProps {
-    navStore?: NavStore;
+  navStore?: NavStore;
 }
 
 @inject('navStore')
 @observer
 export default class Nav extends React.Component<NavProps, {}> {
-    render() {
-        const { navTitle, navigation, display, toggleNav } = this.props.navStore!;
-        return <nav>
-            <NavBurger onClick={toggleNav}>
-                <NavCopy>{navTitle}</NavCopy>
-                <div className={display ? 'burger active' : 'burger'}></div>
-            </NavBurger>
-            <NavMenu className={display ? 'menu active' : 'menu'}>
-                {navigation.map(item => {
-                    return <MenuItem key={item}>
-                        <Link to={item}>
-                            {item}
-                        </Link>
-                    </MenuItem>
-                })}
-            </NavMenu>
-        </nav>
-    }
+  render() {
+    const {navTitle, navigation, display, toggleNav} = this.props.navStore!;
+    return <nav>
+      <NavBurger onClick={toggleNav}>
+        <NavCopy>{navTitle}</NavCopy>
+        <div className={display ? 'burger active' : 'burger'}></div>
+      </NavBurger>
+      <NavMenu className={display ? 'menu active' : 'menu'}>
+        {navigation.map(item => {
+          return <MenuItem key={item}>
+            <Link to={item}>
+              {item}
+            </Link>
+          </MenuItem>;
+        })}
+      </NavMenu>
+    </nav>;
+  }
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { Heading } from './../components/Heading';
+import { Heading } from '../components/Heading';
 import { inject, observer } from 'mobx-react';
 import { AboutStore } from '../stores/AboutStore';
 import { AboutText } from '../components/AboutText';

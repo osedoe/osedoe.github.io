@@ -8,7 +8,7 @@ const LogoWrapper = styled.div`
     color: white;
     display: flex;
     flex-direction: row;
-    font-family: Audiowide;
+    font-family: Audiowide, monospace;
     height: 5em;
     justify-content: center;
     text-align: center;

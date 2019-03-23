@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import Logo from './Logo';
+import { Logo } from './Logo';
 import Nav from './Nav';
 
 const HeaderWrapper = styled.div`
