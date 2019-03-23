@@ -16,34 +16,38 @@ const NavBurger = styled.div`
     position: absolute;
     right: 0;
     top: 0;
-    height: 60px;
-    width: 120px;
+    height: 5em;
+    width: 10em;
     z-index: 1;
 `;
 
+const NavCopy = styled.span`
+    font-size: 1.3em;
+`;
+
 const NavMenu = styled.div`
+    align-items: center;
     background: var(--black);
     color: white;
-    font-family: Audiowide;
-    font-size: 2em;
     display: flex;
     flex-direction: column;
+    font-family: Audiowide;
+    font-size: 2em;
+    height: 100vh;
     justify-content: center;
-    align-items: center;
+    list-style: none;
     position: absolute;
     right: 0;
     top: 0;
-    list-style: none;
-    height: 100vh;
     width: 0;
 `;
 
 const MenuItem = styled.li`
-    display: flex;
-    justify-content: center;
     align-items: center;
-    margin: .4em;
+    display: flex;
     height: 80px;
+    justify-content: center;
+    margin: .4em;
     width: 160px;
 `;
 
@@ -58,7 +62,7 @@ export default class Nav extends React.Component<NavProps, {}> {
         const { navTitle, navigation, display, toggleNav } = this.props.navStore!;
         return <nav>
             <NavBurger onClick={toggleNav}>
-                {navTitle}
+                <NavCopy>{navTitle}</NavCopy>
                 <div className={display ? 'burger active' : 'burger'}></div>
             </NavBurger>
             <NavMenu className={display ? 'menu active' : 'menu'}>

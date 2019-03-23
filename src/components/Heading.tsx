@@ -1,4 +1,5 @@
 import React from 'react';
+import anime from 'animejs';
 import styled from '@emotion/styled';
 
 const Base = styled.div`
@@ -47,13 +48,11 @@ interface HeadingProps {
     title: string;
 }
 
-export default class Heading extends React.Component<HeadingProps, {}> {
-    render() {
-        const { title } = this.props;
-        return <Base>
-            <WhiteBox />
-            <BlueBox>- {title}</BlueBox>
-            <YellowBox />
-        </Base>
-    }
-}
+export const Heading = (props: HeadingProps) => {
+    const { title } = props;
+    return <Base>
+        <WhiteBox />
+        <BlueBox>- {title}</BlueBox>
+        <YellowBox />
+    </Base>;
+};

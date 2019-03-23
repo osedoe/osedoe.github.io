@@ -1,11 +1,11 @@
 import React from 'react';
-import Heading from './../components/Heading';
-import AboutText from './../components/AboutText';
-import AboutTable from './../components/AboutTable';
-import AboutAvatar from './../components/AboutAvatar';
 import styled from '@emotion/styled';
+import { Heading } from './../components/Heading';
 import { inject, observer } from 'mobx-react';
-import { AboutStore } from './../stores/AboutStore';
+import { AboutStore } from '../stores/AboutStore';
+import { AboutText } from '../components/AboutText';
+import { AboutTable } from '../components/AboutTable';
+import { AboutAvatar } from '../components/AboutAvatar';
 
 const AboutWrapper = styled.div`
     background: var(--black);
@@ -42,28 +42,28 @@ const TableWrapper = styled.div`
 `;
 
 export interface AboutProps {
-    aboutStore?: AboutStore;
+  aboutStore?: AboutStore;
 }
 
 @inject('aboutStore')
 @observer
 export default class About extends React.Component<AboutProps, {}> {
-    render() {
-        const { sectionTitle, sectionSubtitles, sectionTexts, sectionSkills } = this.props.aboutStore!;
-        return <AboutWrapper>
-            <HeadingWrapper>
-                <Heading title={sectionTitle} />
-            </HeadingWrapper>
-            <TextWrapper>
-                <AboutText subtitle={sectionSubtitles[0]} text={sectionTexts[0]} />
-                <AboutText subtitle={sectionSubtitles[1]} text={sectionTexts[1]} />
-                <AboutText subtitle={sectionSubtitles[2]} text={sectionTexts[2]} />
-                <TableWrapper>
-                    <SubHeading>{sectionSubtitles[3]}</SubHeading>
-                    <AboutTable elements={sectionSkills} />
-                </TableWrapper>
-            </TextWrapper>
-            <AboutAvatar />
-        </AboutWrapper>;
-    }
+  render() {
+    const {sectionTitle, sectionSubtitles, sectionTexts, sectionSkills} = this.props.aboutStore!;
+    return <AboutWrapper>
+      <HeadingWrapper>
+        <Heading title={sectionTitle}/>
+      </HeadingWrapper>
+      <TextWrapper>
+        <AboutText subtitle={sectionSubtitles[0]} text={sectionTexts[0]}/>
+        <AboutText subtitle={sectionSubtitles[1]} text={sectionTexts[1]}/>
+        <AboutText subtitle={sectionSubtitles[2]} text={sectionTexts[2]}/>
+        <TableWrapper>
+          <SubHeading>{sectionSubtitles[3]}</SubHeading>
+          <AboutTable elements={sectionSkills}/>
+        </TableWrapper>
+      </TextWrapper>
+      <AboutAvatar/>
+    </AboutWrapper>;
+  }
 }

@@ -11,13 +11,13 @@ const Div = styled.div`
 
 const SubHeading = styled.h3`
     color: var(--blue);
-    font-family: audiowide;
+    font-family: audiowide, monospace;
     padding: .3em;
     margin: .1em;
 `;
 
 const Paragraph = styled.p`
-    font-family: 'Exo 2';
+    font-family: 'Exo 2', monospace;
     padding: .5em 2em .5em .5em;
     margin: .1em;
     text-align: justify;
@@ -28,12 +28,10 @@ interface AboutTextProps {
     text: string;
 }
 
-export default class AboutText extends React.Component<AboutTextProps> {
-    render() {
-        const { subtitle, text } = this.props;
-        return <Div>
+export const AboutText = (props: AboutTextProps) => {
+    const { subtitle, text } = props;
+    return <Div>
         <SubHeading>{subtitle}</SubHeading>
         <Paragraph>{text}</Paragraph>
-        </Div>
-    }
-}
+    </Div>;
+};

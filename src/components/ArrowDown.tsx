@@ -23,13 +23,8 @@ const Line = styled.div`
     width: 2px;
 `;
 
-export default class ArrowDown extends React.Component<{}, {}> {
-    render() {
-        return <Arrow>
-            <Box>
-                ||
-            </Box>
-            <Line />
-        </Arrow>
-    }
-}
+export const ArrowDown = () =>
+  <Arrow>
+    <Box> || </Box>
+    <Line/>
+  </Arrow>;

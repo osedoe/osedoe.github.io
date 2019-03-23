@@ -11,11 +11,9 @@ const HeaderWrapper = styled.div`
     z-index: 4;
 `;
 
-export default class Header extends React.Component {
-    render() {
-        return <HeaderWrapper>
-            <Logo />
-            <Nav />
-        </HeaderWrapper>
-    }
-}
+export const Header = () =>
+  <HeaderWrapper>
+    <Logo/>
+    <Nav/>
+  </HeaderWrapper>;
+

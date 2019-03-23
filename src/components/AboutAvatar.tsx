@@ -66,24 +66,18 @@ const Resume = styled.div`
     }
 `;
 
-interface AboutAvatarProps {
-
-}
-
-export default class AboutAvatar extends React.Component<AboutAvatarProps, {}> {
-    render() {
-        return <AvatarWrapper>
-            <DivFrame>
-                <ProfileFrame>
-                    <img src="/profile1.png" alt="Profile" />
-                </ProfileFrame>
-                <SukaFrame>
-                    <img src="/suka1.jpg" alt="Suka" />
-                </SukaFrame>
-            </DivFrame>
-            <Resume>
-                <p>My Resume</p>
-            </Resume>
-        </AvatarWrapper>;
-    }
-}
+export const AboutAvatar = () => {
+    return <AvatarWrapper>
+        <DivFrame>
+            <ProfileFrame>
+                <img src="/profile1.png" alt="Profile" />
+            </ProfileFrame>
+            <SukaFrame>
+                <img src="/suka1.jpg" alt="Suka" />
+            </SukaFrame>
+        </DivFrame>
+        <Resume>
+            <p>My Resume</p>
+        </Resume>
+    </AvatarWrapper>;
+};
