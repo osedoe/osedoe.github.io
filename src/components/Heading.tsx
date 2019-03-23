@@ -1,5 +1,4 @@
 import React from 'react';
-import anime from 'animejs';
 import styled from '@emotion/styled';
 
 const Base = styled.div`
@@ -15,7 +14,7 @@ const BlueBox = styled.span`
     background: var(--black);
     border-bottom: 3px solid var(--blue);
     color: var(--white);
-    font-family: Audiowide;
+    font-family: Audiowide, monospace;
     position: absolute;
     left: 14%;
     bottom: 30%;

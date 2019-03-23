@@ -4,11 +4,11 @@ import { Logo } from './Logo';
 import Nav from './Nav';
 
 const HeaderWrapper = styled.div`
-    display: flex;
-    justify-content: space-between;
-    position: fixed;
-    width: 100vw;
-    z-index: 4;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  width: 100vw;
+  z-index: 4;
 `;
 
 export const Header = () =>
@@ -16,4 +16,3 @@ export const Header = () =>
     <Logo/>
     <Nav/>
   </HeaderWrapper>;
-

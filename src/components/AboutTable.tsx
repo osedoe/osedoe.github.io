@@ -8,25 +8,17 @@ const Table = styled.table`
 `;
 
 interface AboutTableProps {
-    elements: string[][];
+  elements: string[][];
 }
 
 export const AboutTable = (props: AboutTableProps) => {
-    const { elements } = props;
-    return <Table>
-        <tbody>
-        <tr>
-            {elements[0].map(element => <td key={element}>{element}</td>)}
-        </tr>
-        <tr>
-            {elements[1].map(element => <td key={element}>{element}</td>)}
-        </tr>
-        <tr>
-            {elements[2].map(element => <td key={element}>{element}</td>)}
-        </tr>
-        <tr>
-            {elements[3].map(element => <td key={element}>{element}</td>)}
-        </tr>
-        </tbody>
-    </Table>;
+  const {elements} = props;
+  return <Table>
+    <tbody>
+    <tr>{elements[0].map(element => <td key={element}>{element}</td>)}</tr>
+    <tr>{elements[1].map(element => <td key={element}>{element}</td>)}</tr>
+    <tr>{elements[2].map(element => <td key={element}>{element}</td>)}</tr>
+    <tr>{elements[3].map(element => <td key={element}>{element}</td>)}</tr>
+    </tbody>
+  </Table>;
 };
