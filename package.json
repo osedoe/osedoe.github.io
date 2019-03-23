@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "animejs": "^3.0.1",
     "mobx": "^5.8.0",
     "mobx-react": "^5.4.3",
     "parcel-bundler": "^1.11.0",
