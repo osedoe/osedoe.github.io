@@ -2,6 +2,7 @@ import React from 'react';
 import styled from '@emotion/styled';
 import { Logo } from './Logo';
 import Nav from './Nav';
+import { SocialBar } from './SocialBar';
 
 const HeaderWrapper = styled.div`
   display: flex;
@@ -15,4 +16,5 @@ export const Header = () =>
   <HeaderWrapper>
     <Logo/>
     <Nav/>
+    <SocialBar/>
   </HeaderWrapper>;

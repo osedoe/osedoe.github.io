@@ -29,5 +29,5 @@ const Span2 = styled.span`
 
 export const Logo = () =>
   <LogoWrapper>
-    <LogoCopy>J<Span1>ose</Span1> D<Span2>iaz</Span2></LogoCopy>
+    <LogoCopy>_<Span1>Jose</Span1> <Span2>Diaz</Span2></LogoCopy>
   </LogoWrapper>;

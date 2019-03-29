@@ -1,7 +1,15 @@
 import { observable } from 'mobx';
 
 export class LandingStore {
-    @observable heading1: string = 'Hola.';
-    @observable heading2: string = `I'm Jose`;
-    @observable heading3: string = `A Full Stack Developer from the Canary Islands`;
+    @observable headingText = {
+        greeting: 'Hola.',
+        introduction: 'I\'m Jose Diaz',
+        job: 'Full Stack Developer | Nologis',
+        description: 'Specialized in JavaScript, TypeScript, ReactJS and NodeJS.'
+
+
+    };
+    @observable heading1: string = 'I\'m Jose Diaz';
+    @observable heading2: string = `Full Stack Developer at Nologis`;
+    @observable heading3: string = `Specialized in `;
 }
