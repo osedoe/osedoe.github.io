@@ -8,7 +8,7 @@ import './Nav.css';
 const NavBurger = styled.div`
     background: var(--black);
     border: 3px solid var(--white);
-    color: white;
+    color: var(--white);
     font-family: Audiowide, monospace;
     display: flex;
     justify-content: center;
@@ -19,6 +19,7 @@ const NavBurger = styled.div`
     height: 5em;
     width: 10em;
     z-index: 1;
+    // TODO: Dye everything in black and onHover paint it
 `;
 
 const NavCopy = styled.span`
@@ -28,7 +29,7 @@ const NavCopy = styled.span`
 const NavMenu = styled.div`
     align-items: center;
     background: var(--black);
-    color: white;
+    color: var(--white);
     display: flex;
     flex-direction: column;
     font-family: Audiowide, monospace;
@@ -59,20 +60,20 @@ interface NavProps {
 @observer
 export default class Nav extends React.Component<NavProps, {}> {
   render() {
-    const {navTitle, navigation, display, toggleNav} = this.props.navStore!;
+    const { navTitle, navigation, display, toggleNav } = this.props.navStore!;
     return <nav>
-      <NavBurger onClick={toggleNav}>
-        <NavCopy>{navTitle}</NavCopy>
-        <span className={display ? 'burger active' : 'burger'}/>
+      <NavBurger onClick={ toggleNav }>
+        <NavCopy>{ navTitle }</NavCopy>
+        <span className={ display ? 'burger active' : 'burger' }/>
       </NavBurger>
-      <NavMenu className={display ? 'menu active' : 'menu'}>
-        {navigation.map(item => {
-          return <MenuItem key={item}>
-            <Link to={item} onClick={toggleNav}>
-              {item}
+      <NavMenu className={ display ? 'menu active' : 'menu' }>
+        { navigation.map(item => {
+          return <MenuItem key={ item }>
+            <Link to={ item } onClick={ toggleNav }>
+              { item }
             </Link>
           </MenuItem>;
-        })}
+        }) }
       </NavMenu>
     </nav>;
   }

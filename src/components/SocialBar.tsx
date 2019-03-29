@@ -1,9 +1,12 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styled from '@emotion/styled';
+import { faGithubSquare, faTwitterSquare, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
+  font-size: 1.8em;
   bottom: 0;
   left: .6em;
   align-items: center;
@@ -32,6 +35,8 @@ const Wrapper = styled.div`
 
 export const SocialBar = () => {
   return <Wrapper>
-    social
+    <FontAwesomeIcon icon={ faGithubSquare }/>
+    <FontAwesomeIcon icon={ faTwitterSquare}/>
+    <FontAwesomeIcon icon={ faLinkedin }/>
   </Wrapper>;
 };
