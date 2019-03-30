@@ -6,13 +6,14 @@ import { NavStore } from '../stores/NavStore';
 import './Nav.css';
 
 const NavBurger = styled.div`
-    background: var(--black);
-    border: 3px solid var(--white);
-    color: var(--white);
+    background: transparent;
+    color: var(--black);
     font-family: Audiowide, monospace;
+    font-size: 1.3em;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 2em;
     position: absolute;
     right: 0;
     top: 0;

@@ -4,15 +4,15 @@ import styled from '@emotion/styled';
 import { faGithubSquare, faTwitterSquare, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 const Wrapper = styled.div`
+  color: var(--black);
   display: flex;
   flex-direction: column;
-  font-size: 1.8em;
-  bottom: 0;
-  left: .6em;
   align-items: center;
-  opacity: 0.8;
+  font-size: 1.8em;
   position: fixed;
   bottom: 0;
+  left: .6em;
+  opacity: 0.8;
   :before {
     content: '';
     height: 201px;
@@ -33,10 +33,11 @@ const Wrapper = styled.div`
   }
 `;
 
+
 export const SocialBar = () => {
   return <Wrapper>
-    <FontAwesomeIcon icon={ faGithubSquare }/>
-    <FontAwesomeIcon icon={ faTwitterSquare}/>
-    <FontAwesomeIcon icon={ faLinkedin }/>
+    <a href="#"><FontAwesomeIcon icon={ faGithubSquare }/></a>
+    <a href="#"><FontAwesomeIcon icon={ faTwitterSquare}/></a>
+    <a href="#"><FontAwesomeIcon icon={ faLinkedin }/></a>
   </Wrapper>;
 };

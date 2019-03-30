@@ -4,7 +4,7 @@ export class NavStore {
     constructor() {
         this.toggleNav = this.toggleNav.bind(this);
     }
-    @observable navTitle: string = `Menu`;
+    @observable navTitle: string = `_Menu`;
     @observable display: boolean = false;
     @observable navigation: string[] = [
         `Home`,

@@ -6,6 +6,7 @@ import { Power2, SteppedEase, TimelineLite, TimelineMax, TweenMax } from 'gsap';
 
 const Wrapper = styled.div`
   background: var(--white);
+  background-size: cover;
   display: grid;
   grid-template-columns: 3fr 4fr;
   grid-template-rows: 3fr 1fr 2fr;
@@ -27,8 +28,15 @@ const Jumbotron = styled.div`
   }
 `;
 
-const Div = styled.div`
-  background: red;
+const Dot = styled.span`
+  background: var(--black);
+  border-radius: 50%;
+  position: absolute;
+  height: 10px;
+  width: 10px;
+  top: 50%;
+  left: 50%;
+  transform: translate(${ generateRandom(0, 100) }, ${ generateRandom(0, 100) });
 `;
 
 export interface LandingProps {
@@ -42,11 +50,18 @@ function generateRandom(min, max) {
 @inject('landingStore')
 @observer
 export default class Landing extends React.Component<LandingProps, {}> {
-  private jumbotronRef: any;
+  private tween: ReturnType<typeof TweenMax.from> | null;
+  private jumbotronRef: HTMLDivElement | null;
+  private dot1Ref: any;
+  private dot2Ref: any;
+  private dot3Ref: any;
+  private dot4Ref: any;
+  private dot5Ref: any;
 
   constructor(props: LandingProps) {
     super(props);
-    this.jumbotronRef = React.createRef();
+    this.tween = new TimelineMax({ repeat: -1 });
+    this.jumbotronRef = null;
   }
 
   componentDidMount(): void {
@@ -55,11 +70,40 @@ export default class Landing extends React.Component<LandingProps, {}> {
       y: () => generateRandom(-1000, 1000),
       opacity: 0
     });
+    // this.tween
+    //   .to([this.dot1Ref], .1, {
+    //   x: () => generateRandom(-1000, 1000),
+    //   y: () => generateRandom(-1000, 1000),
+    //   opacity: 0
+    // })
+    //   .to([this.dot2Ref], 5, {
+    //   x: () => generateRandom(-1000, 1000),
+    //   y: () => generateRandom(-1000, 1000)
+    // })
+    //   .to([this.dot3Ref], 5, {
+    //   x: () => generateRandom(-1000, 1000),
+    //   y: () => generateRandom(-1000, 1000)
+    // })
+    //   .to([this.dot4Ref], 5, {
+    //   x: () => generateRandom(-1000, 1000),
+    //   y: () => generateRandom(-1000, 1000)
+    // })
+    //   .to([this.dot5Ref], 5, {
+    //   x: () => generateRandom(-1000, 1000),
+    //   y: () => generateRandom(-1000, 1000)
+    // });
+
   }
 
   render() {
     const { headingText } = this.props.landingStore!;
     return <Wrapper>
+      {/*<Particle ref={ div => this.dot1Ref = div}/>*/ }
+      <Dot ref={ div => this.dot1Ref = div }/>
+      <Dot ref={ div => this.dot2Ref = div }/>
+      <Dot ref={ div => this.dot3Ref = div }/>
+      <Dot ref={ div => this.dot4Ref = div }/>
+      <Dot ref={ div => this.dot5Ref = div }/>
       <Jumbotron ref={ div => this.jumbotronRef = div }>
         <h1>{ headingText.greeting }</h1>
         <h2>{ headingText.introduction }</h2>

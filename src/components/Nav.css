@@ -1,5 +1,6 @@
 .burger {
     background: var(--blue);
+    box-shadow: 1px 1px 1px var(--black);
     margin: .4em;
     position: relative;
     height: 4px;
@@ -9,6 +10,7 @@
 
 .burger:before {
     background: var(--white);
+    box-shadow: 1px 1px 1px var(--black);
     content: '';
     position: absolute;
     top: -8px;
@@ -19,6 +21,7 @@
 
 .burger:after {
     background: var(--yellow);
+    box-shadow: 1px 1px 1px var(--black);
     content: '';
     position: absolute;
     top: 8px;
@@ -28,7 +31,7 @@
 }
 
 .burger.active {
-    transform: rotate(135deg);
+    transform: scale(2) rotate(135deg) translateX(-20px);
     transition: all .5s ease-in-out;
 }
 
