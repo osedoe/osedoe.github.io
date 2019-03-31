@@ -5,10 +5,11 @@ import Nav from './Nav';
 import { SocialBar } from './SocialBar';
 
 const HeaderWrapper = styled.div`
+  background: transparent;
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
-  position: fixed;
+  position: absolute;
   width: 100vw;
   z-index: 4;
 `;

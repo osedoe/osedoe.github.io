@@ -3,18 +3,20 @@ import styled from '@emotion/styled';
 import { Heading } from '../components/Heading';
 import { inject, observer } from 'mobx-react';
 import { AboutStore } from '../stores/AboutStore';
-import { AboutText } from '../components/AboutText';
-import { AboutTable } from '../components/AboutTable';
-import { AboutAvatar } from '../components/AboutAvatar';
+import { AboutText } from '../components/about/AboutText';
+import { AboutTable } from '../components/about/AboutTable';
+import { AboutAvatar } from '../components/about/AboutAvatar';
 
 const AboutWrapper = styled.div`
     background: var(--black);
+    box-sizing: border-box;
     color: var(--white);
     display: grid;
     height: 100%;
     grid-template-columns: 4fr 3fr;
     grid-gap: 1em;
     justify-content: center;
+    padding: 2em;
 `;
 
 const HeadingWrapper = styled.div`
@@ -24,20 +26,20 @@ const HeadingWrapper = styled.div`
 `;
 
 const TextWrapper = styled.div`
-    margin: .5em 1.5em;
+    margin: .3em 1.5em;
 `;
 
 const SubHeading = styled.h3`
     color: var(--blue);
-    font-family: audiowide;
+    font-family: Audiowide, monospace;
+    margin: 0 .1em;
     padding: .3em;
-    margin: .1em;
 `;
 
 const TableWrapper = styled.div`
     display: flex;
     flex-direction: column;
-    margin: .3em;
+    margin: 0 .3em;
     padding: .3em;
 `;
 

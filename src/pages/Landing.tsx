@@ -4,7 +4,112 @@ import { LandingStore } from '../stores/LandingStore';
 import styled from '@emotion/styled';
 import { Power2, SteppedEase, TimelineLite, TimelineMax, TweenMax } from 'gsap';
 import Particles from 'react-particles-js';
-import { generateRandom } from '../utils';
+import { generateRandomNumber } from '../utils';
+
+const particlesParams: any = {
+  particles: {
+    number: {
+      value: 80,
+      density: {
+        enable: true,
+        value_area: 800
+      }
+    },
+    color: {
+      value: '#F5F5F5'
+    },
+    shape: {
+      type: 'circle',
+      stroke: {
+        width: 0.5,
+        color: '#F5F5F5'
+      },
+      polygon: {
+        nb_sides: 5
+      }
+    },
+    opacity: {
+      value: 0.5,
+      random: false,
+      anim: {
+        enable: false,
+        speed: 1,
+        opacity_min: 0.1,
+        sync: false
+      }
+    },
+    size: {
+      value: 3,
+      random: true,
+      anim: {
+        enable: false,
+        speed: 40,
+        size_min: 0.1,
+        sync: false
+      }
+    },
+    line_linked: {
+      enable: true,
+      distance: 150,
+      color: '#F5F5F5',
+      opacity: 0.4,
+      width: 1
+    },
+    move: {
+      enable: true,
+      speed: 6,
+      direction: 'none',
+      random: true,
+      straight: false,
+      out_mode: 'out',
+      bounce: false,
+      attract: {
+        enable: true,
+        rotateX: 600,
+        rotateY: 1200
+      }
+    }
+  },
+  interactivity: {
+    detect_on: 'canvas',
+    events: {
+      onhover: {
+        enable: true,
+        mode: 'repulse'
+      },
+      onclick: {
+        enable: true,
+        mode: 'push'
+      },
+      resize: true
+    },
+    modes: {
+      grab: {
+        distance: 400,
+        line_linked: {
+          opacity: 1
+        }
+      },
+      bubble: {
+        distance: 400,
+        size: 40,
+        duration: 2,
+        opacity: 8,
+        speed: 3
+      },
+      repulse: {
+        distance: 100,
+        duration: 0.4
+      },
+      push: {
+        particles_nb: 4
+      },
+      remove: {
+        particles_nb: 2
+      }
+    }
+  }
+};
 
 const Wrapper = styled.div`
   background: var(--black);
@@ -30,6 +135,7 @@ const Jumbotron = styled.div`
   grid-column: 2/3;
   grid-row: 2/3;
   justify-self: end;
+  pointer-events: none;
   margin: 1em;
   padding: 1em;
   @media (max-width: 980px) {
@@ -61,8 +167,8 @@ export default class Landing extends React.Component<LandingProps, {}> {
 
   componentDidMount(): void {
     TweenMax.from(this.jumbotronRef, 2.5, {
-      x: () => generateRandom(-1000, 1000),
-      y: () => generateRandom(-1000, 1000),
+      x: () => generateRandomNumber(-1000, 1000),
+      y: () => generateRandomNumber(-1000, 1000),
       opacity: 0
     });
   }
@@ -70,7 +176,7 @@ export default class Landing extends React.Component<LandingProps, {}> {
   render() {
     const { headingText } = this.props.landingStore!;
     return <Wrapper>
-      <StyledParticles/>
+      <StyledParticles params={particlesParams}/>
       <Jumbotron ref={ div => this.jumbotronRef = div }>
         <h1>{ headingText.greeting }</h1>
         <h2>{ headingText.introduction }</h2>

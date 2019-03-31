@@ -6,7 +6,6 @@ import { NavStore } from '../stores/NavStore';
 import './Nav.css';
 
 const NavBurger = styled.div`
-  background: transparent;
   box-sizing: border-box;
   color: var(--white);
   cursor: pointer;
@@ -19,7 +18,7 @@ const NavBurger = styled.div`
   position: absolute;
   right: 0;
   top: 0;
-  height: 5em;
+  height: 2em;
   width: 10em;
   z-index: 1;
   @media (max-width: 1000px) {

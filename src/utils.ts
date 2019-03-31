@@ -1,5 +1,3 @@
-export function generateRandom(min, max) {
-  const result = Math.random() * (max - min) + min;
-  console.log(result);
-  return result;
+export function generateRandomNumber(min, max) {
+  return Math.random() * (max - min) + min;
 }

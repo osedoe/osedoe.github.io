@@ -3,7 +3,6 @@ import styled from '@emotion/styled';
 
 const LogoWrapper = styled.div`
     align-items: center;
-    background: transparent;
     box-sizing: border-box;
     color: var(--white);
     font-family: Audiowide, monospace;
@@ -13,7 +12,8 @@ const LogoWrapper = styled.div`
     justify-content: center;
     text-align: center;
     margin: 1em;
-    height: 5em;
+    pointer-events: none;
+    height: 2em;
     width: 10em;
     @media (max-width: 1000px) {
       font-size: 1em;

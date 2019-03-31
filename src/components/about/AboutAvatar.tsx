@@ -61,7 +61,7 @@ const Resume = styled.div`
     width: 100%;
     & p {
         border: 3px solid var(--white);
-        font-family: Audiowide;
+        font-family: Audiowide, monospace;
         padding: .5em;
     }
 `;
@@ -70,7 +70,7 @@ export const AboutAvatar = () => {
     return <AvatarWrapper>
         <DivFrame>
             <ProfileFrame>
-                <img src="/profile1.png" alt="Profile" />
+                <img src="//profile1.png" alt="Profile" />
             </ProfileFrame>
             <SukaFrame>
                 <img src="/suka1.jpg" alt="Suka" />

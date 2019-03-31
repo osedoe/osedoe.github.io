@@ -2,7 +2,7 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styled from '@emotion/styled';
 import { faGithubSquare, faTwitterSquare, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { generateRandom } from '../utils';
+import { generateRandomNumber } from '../utils';
 
 const Wrapper = styled.div`
   color: var(--white);
@@ -13,6 +13,7 @@ const Wrapper = styled.div`
   position: fixed;
   bottom: 0;
   left: .6em;
+  opacity: .85;
   :before {
     content: '';
     height: 201px;
@@ -32,14 +33,17 @@ const Wrapper = styled.div`
     border-radius: 2px;
   }
   & a:hover {
-    color: ${generateRandom(0, 1) >= .5 ? 'var(--blue)' : 'var(--yellow)'};
+    color: ${generateRandomNumber(0, 1) >= .5 ? 'var(--blue)' : 'var(--yellow)'};
+    transform: rotate(360deg) scale(1.2);
+    transition: all 400ms;
+    opacity: 1;
   }
 `;
 
 export const SocialBar = () => {
   return <Wrapper>
-    <a href="#"><FontAwesomeIcon icon={ faGithubSquare }/></a>
-    <a href="#"><FontAwesomeIcon icon={ faTwitterSquare}/></a>
-    <a href="#"><FontAwesomeIcon icon={ faLinkedin }/></a>
+    <a href="https://github.com/osedoe"><FontAwesomeIcon icon={ faGithubSquare }/></a>
+    <a href="https://twitter.com/Osedoe?lang=en"><FontAwesomeIcon icon={ faTwitterSquare}/></a>
+    <a href="https://linkedin.com/in/jose-diaz-gonzalez-696067107"><FontAwesomeIcon icon={ faLinkedin }/></a>
   </Wrapper>;
 };
