@@ -3,6 +3,7 @@ import { inject, observer } from 'mobx-react';
 import { LandingStore } from '../stores/LandingStore';
 import styled from '@emotion/styled';
 import { Power2, SteppedEase, TimelineLite, TimelineMax, TweenMax } from 'gsap';
+import Particles from 'react-particles-js';
 import { generateRandom } from '../utils';
 
 const Wrapper = styled.div`
@@ -15,9 +16,15 @@ const Wrapper = styled.div`
   position: relative;
 `;
 
+const StyledParticles = styled(Particles)`
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+`;
+
 const Jumbotron = styled.div`
   align-self: end;
-  color: var(--black);
+  color: var(--white);
   font-family: Audiowide, monospace;
   font-size: 1.5em;
   grid-column: 2/3;
@@ -30,15 +37,10 @@ const Jumbotron = styled.div`
   }
 `;
 
-const Dot = styled.span`
-  background: var(--black);
-  border-radius: 50%;
-  position: absolute;
-  height: 10px;
-  width: 10px;
-  top: 50%;
-  left: 50%;
-  transform: translate(${ generateRandom(0, 100) }, ${ generateRandom(0, 100) });
+const H4 = styled.h4`
+  @media (max-width: 500px) {
+    display: none;
+  }
 `;
 
 export interface LandingProps {
@@ -48,17 +50,12 @@ export interface LandingProps {
 @inject('landingStore')
 @observer
 export default class Landing extends React.Component<LandingProps, {}> {
-  private tween: ReturnType<typeof TweenMax.from> | null;
+  // private tween: ReturnType<typeof TweenMax.from> | null;
   private jumbotronRef: HTMLDivElement | null;
-  private dot1Ref: any;
-  private dot2Ref: any;
-  private dot3Ref: any;
-  private dot4Ref: any;
-  private dot5Ref: any;
 
   constructor(props: LandingProps) {
     super(props);
-    this.tween = new TimelineMax({ repeat: -1 });
+    // this.tween = new TimelineMax({ repeat: -1 });
     this.jumbotronRef = null;
   }
 
@@ -68,45 +65,17 @@ export default class Landing extends React.Component<LandingProps, {}> {
       y: () => generateRandom(-1000, 1000),
       opacity: 0
     });
-    // this.tween
-    //   .to([this.dot1Ref], .1, {
-    //   x: () => generateRandom(-1000, 1000),
-    //   y: () => generateRandom(-1000, 1000),
-    //   opacity: 0
-    // })
-    //   .to([this.dot2Ref], 5, {
-    //   x: () => generateRandom(-1000, 1000),
-    //   y: () => generateRandom(-1000, 1000)
-    // })
-    //   .to([this.dot3Ref], 5, {
-    //   x: () => generateRandom(-1000, 1000),
-    //   y: () => generateRandom(-1000, 1000)
-    // })
-    //   .to([this.dot4Ref], 5, {
-    //   x: () => generateRandom(-1000, 1000),
-    //   y: () => generateRandom(-1000, 1000)
-    // })
-    //   .to([this.dot5Ref], 5, {
-    //   x: () => generateRandom(-1000, 1000),
-    //   y: () => generateRandom(-1000, 1000)
-    // });
-
   }
 
   render() {
     const { headingText } = this.props.landingStore!;
     return <Wrapper>
-      {/*<Particle ref={ div => this.dot1Ref = div}/>*/ }
-      <Dot ref={ div => this.dot1Ref = div }/>
-      <Dot ref={ div => this.dot2Ref = div }/>
-      <Dot ref={ div => this.dot3Ref = div }/>
-      <Dot ref={ div => this.dot4Ref = div }/>
-      <Dot ref={ div => this.dot5Ref = div }/>
+      <StyledParticles/>
       <Jumbotron ref={ div => this.jumbotronRef = div }>
-        {/*<h1>{ headingText.greeting }</h1>*/}
-        {/*<h2>{ headingText.introduction }</h2>*/}
-        {/*<h3>{ headingText.job }</h3>*/}
-        {/*<h4>{ headingText.description }</h4>*/}
+        <h1>{ headingText.greeting }</h1>
+        <h2>{ headingText.introduction }</h2>
+        <h3>{ headingText.job }</h3>
+        <H4>{ headingText.description }</H4>
       </Jumbotron>
     </Wrapper>;
   }
