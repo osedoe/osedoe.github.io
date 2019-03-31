@@ -5,6 +5,7 @@ import Nav from './Nav';
 import { SocialBar } from './SocialBar';
 
 const HeaderWrapper = styled.div`
+  box-sizing: border-box;
   display: flex;
   justify-content: space-between;
   position: fixed;

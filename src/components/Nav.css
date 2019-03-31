@@ -31,7 +31,7 @@
 }
 
 .burger.active {
-    transform: scale(2) rotate(135deg) translateX(-20px);
+    transform: scale(2) rotate(135deg);
     transition: all .5s ease-in-out;
 }
 

@@ -5,11 +5,14 @@
     --yellow: rgb(249, 205, 70);
 }
 
+body {
+    background: var(--black);
+}
+
 a {
-    color: var(--white);
+    color: inherit;
 }
 
 a:visited {
-    color: inherit;
     text-decoration: none;
 }

@@ -3,9 +3,10 @@ import { inject, observer } from 'mobx-react';
 import { LandingStore } from '../stores/LandingStore';
 import styled from '@emotion/styled';
 import { Power2, SteppedEase, TimelineLite, TimelineMax, TweenMax } from 'gsap';
+import { generateRandom } from '../utils';
 
 const Wrapper = styled.div`
-  background: var(--white);
+  background: var(--black);
   background-size: cover;
   display: grid;
   grid-template-columns: 3fr 4fr;
@@ -16,6 +17,7 @@ const Wrapper = styled.div`
 
 const Jumbotron = styled.div`
   align-self: end;
+  color: var(--black);
   font-family: Audiowide, monospace;
   font-size: 1.5em;
   grid-column: 2/3;
@@ -41,10 +43,6 @@ const Dot = styled.span`
 
 export interface LandingProps {
   landingStore?: LandingStore;
-}
-
-function generateRandom(min, max) {
-  return Math.random() * (max - min) + min;
 }
 
 @inject('landingStore')
@@ -105,10 +103,10 @@ export default class Landing extends React.Component<LandingProps, {}> {
       <Dot ref={ div => this.dot4Ref = div }/>
       <Dot ref={ div => this.dot5Ref = div }/>
       <Jumbotron ref={ div => this.jumbotronRef = div }>
-        <h1>{ headingText.greeting }</h1>
-        <h2>{ headingText.introduction }</h2>
-        <h3>{ headingText.job }</h3>
-        <h4>{ headingText.description }</h4>
+        {/*<h1>{ headingText.greeting }</h1>*/}
+        {/*<h2>{ headingText.introduction }</h2>*/}
+        {/*<h3>{ headingText.job }</h3>*/}
+        {/*<h4>{ headingText.description }</h4>*/}
       </Jumbotron>
     </Wrapper>;
   }
