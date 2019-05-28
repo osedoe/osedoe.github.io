@@ -7,12 +7,16 @@ import { AboutText } from '../components/about/AboutText';
 import { AboutTable } from '../components/about/AboutTable';
 import { AboutAvatar } from '../components/about/AboutAvatar';
 
-const AboutWrapper = styled.div`
-    background: var(--black);
+const Section = styled.section`
+    background: linear-gradient(
+    to bottom right,
+    var(--black) 50%,
+    black
+  );
     box-sizing: border-box;
     color: var(--white);
     display: grid;
-    height: 100%;
+    height: 100vh;
     grid-template-columns: 4fr 3fr;
     grid-gap: 1em;
     justify-content: center;
@@ -51,21 +55,21 @@ export interface AboutProps {
 @observer
 export default class About extends React.Component<AboutProps, {}> {
   render() {
-    const {sectionTitle, sectionSubtitles, sectionTexts, sectionSkills} = this.props.aboutStore!;
-    return <AboutWrapper>
+    const { sectionTitle, sectionSubtitles, sectionTexts, sectionSkills } = this.props.aboutStore!;
+    return <Section>
       <HeadingWrapper>
-        <Heading title={sectionTitle}/>
+        <Heading title={ sectionTitle }/>
       </HeadingWrapper>
       <TextWrapper>
-        <AboutText subtitle={sectionSubtitles[0]} text={sectionTexts[0]}/>
-        <AboutText subtitle={sectionSubtitles[1]} text={sectionTexts[1]}/>
-        <AboutText subtitle={sectionSubtitles[2]} text={sectionTexts[2]}/>
+        <AboutText subtitle={ sectionSubtitles[0] } text={ sectionTexts[0] }/>
+        <AboutText subtitle={ sectionSubtitles[1] } text={ sectionTexts[1] }/>
+        <AboutText subtitle={ sectionSubtitles[2] } text={ sectionTexts[2] }/>
         <TableWrapper>
-          <SubHeading>{sectionSubtitles[3]}</SubHeading>
-          <AboutTable elements={sectionSkills}/>
+          <SubHeading>{ sectionSubtitles[3] }</SubHeading>
+          <AboutTable elements={ sectionSkills }/>
         </TableWrapper>
       </TextWrapper>
       <AboutAvatar/>
-    </AboutWrapper>;
+    </Section>;
   }
 }

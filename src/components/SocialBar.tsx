@@ -2,7 +2,7 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styled from '@emotion/styled';
 import { faGithubSquare, faTwitterSquare, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { generateRandomNumber } from '../utils';
+import { generateRandomNumber } from '../utils/utils';
 
 const Wrapper = styled.div`
   color: var(--white);

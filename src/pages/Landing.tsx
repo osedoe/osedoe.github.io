@@ -4,115 +4,17 @@ import { LandingStore } from '../stores/LandingStore';
 import styled from '@emotion/styled';
 import { Power2, SteppedEase, TimelineLite, TimelineMax, TweenMax } from 'gsap';
 import Particles from 'react-particles-js';
-import { generateRandomNumber } from '../utils';
+import { generateRandomNumber } from '../utils/utils';
+import * as particlesJSON from './../utils/particles.json';
 
-const particlesParams: any = {
-  particles: {
-    number: {
-      value: 80,
-      density: {
-        enable: true,
-        value_area: 800
-      }
-    },
-    color: {
-      value: '#F5F5F5'
-    },
-    shape: {
-      type: 'circle',
-      stroke: {
-        width: 0.5,
-        color: '#F5F5F5'
-      },
-      polygon: {
-        nb_sides: 5
-      }
-    },
-    opacity: {
-      value: 0.5,
-      random: false,
-      anim: {
-        enable: false,
-        speed: 1,
-        opacity_min: 0.1,
-        sync: false
-      }
-    },
-    size: {
-      value: 3,
-      random: true,
-      anim: {
-        enable: false,
-        speed: 40,
-        size_min: 0.1,
-        sync: false
-      }
-    },
-    line_linked: {
-      enable: true,
-      distance: 150,
-      color: '#F5F5F5',
-      opacity: 0.4,
-      width: 1
-    },
-    move: {
-      enable: true,
-      speed: 6,
-      direction: 'none',
-      random: true,
-      straight: false,
-      out_mode: 'out',
-      bounce: false,
-      attract: {
-        enable: true,
-        rotateX: 600,
-        rotateY: 1200
-      }
-    }
-  },
-  interactivity: {
-    detect_on: 'canvas',
-    events: {
-      onhover: {
-        enable: true,
-        mode: 'repulse'
-      },
-      onclick: {
-        enable: true,
-        mode: 'push'
-      },
-      resize: true
-    },
-    modes: {
-      grab: {
-        distance: 400,
-        line_linked: {
-          opacity: 1
-        }
-      },
-      bubble: {
-        distance: 400,
-        size: 40,
-        duration: 2,
-        opacity: 8,
-        speed: 3
-      },
-      repulse: {
-        distance: 100,
-        duration: 0.4
-      },
-      push: {
-        particles_nb: 4
-      },
-      remove: {
-        particles_nb: 2
-      }
-    }
-  }
-};
+const particlesParams: any = particlesJSON;
 
 const Wrapper = styled.div`
-  background: var(--black);
+  background: linear-gradient(
+    to bottom right,
+    var(--black) 50%,
+    black
+  );
   background-size: cover;
   display: grid;
   grid-template-columns: 3fr 4fr;
@@ -156,12 +58,10 @@ export interface LandingProps {
 @inject('landingStore')
 @observer
 export default class Landing extends React.Component<LandingProps, {}> {
-  // private tween: ReturnType<typeof TweenMax.from> | null;
   private jumbotronRef: HTMLDivElement | null;
 
   constructor(props: LandingProps) {
     super(props);
-    // this.tween = new TimelineMax({ repeat: -1 });
     this.jumbotronRef = null;
   }
 

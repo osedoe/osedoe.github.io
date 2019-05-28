@@ -1,7 +1,7 @@
 import { observable } from 'mobx';
 
 export class AboutStore {
-    @observable sectionTitle: string = `About`;
+    @observable sectionTitle: string = 'About';
     @observable sectionSubtitles: string[] = [
         `Foreword`,
         `The Developer`,
