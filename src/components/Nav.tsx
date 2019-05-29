@@ -1,8 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import styled from '@emotion/styled';
-import { inject, observer } from 'mobx-react';
-import { NavStore } from '../stores/NavStore';
 import './Nav.css';
 
 const NavBurger = styled.div`
@@ -32,6 +30,7 @@ const NavCopy = styled.span`
   color: var(--white);
   font-size: 1.3em;
   margin-right: .5em;
+  user-select: none;
   :hover {
     color: transparent;
     background-image: -webkit-linear-gradient(
@@ -72,36 +71,43 @@ const NavMenu = styled.div`
 
 const MenuItem = styled.li`
   align-items: center;
+  cursor: not-allowed;
   display: flex;
   height: 80px;
   justify-content: center;
   margin: .4em;
   width: 160px;
+  & > * {
+    pointer-events: none;
+  }
 `;
 
-interface NavProps {
-  navStore?: NavStore;
-}
+export const Nav = () => {
+  const [display, setDisplay] = useState(false);
+  const toggleNav = () => setDisplay(!display);
+  const toggleNav2 = event => {
+    event.preventDefault();
+    setDisplay(!display);
+  };
 
-@inject('navStore')
-@observer
-export default class Nav extends React.Component<NavProps, {}> {
-  render() {
-    const { navTitle, navigation, display, toggleNav } = this.props.navStore!;
-    return <nav>
-      <NavBurger onClick={ toggleNav }>
-        <NavCopy>{ navTitle }</NavCopy>
-        <span className={ display ? 'burger active' : 'burger' }/>
-      </NavBurger>
-      <NavMenu className={ display ? 'menu active' : 'menu' }>
-        { navigation.map(item => {
-          return <MenuItem key={ item }>
-            <Link to={ item } onClick={ toggleNav }>
-              { item }
-            </Link>
-          </MenuItem>;
-        }) }
-      </NavMenu>
-    </nav>;
-  }
-}
+  return <nav>
+    <NavBurger onClick={ toggleNav }>
+      <NavCopy>_Menu</NavCopy>
+      <span className={ display ? 'burger active' : 'burger' }/>
+    </NavBurger>
+    <NavMenu className={ display ? 'menu active' : 'menu' }>
+      <MenuItem key="Home">
+        <Link to="Home" onClick={ toggleNav2 }>Home</Link>
+      </MenuItem>
+      <MenuItem key="About">
+        <Link to="About" onClick={ toggleNav2 }>About</Link>
+      </MenuItem>
+      <MenuItem key="Work">
+        <Link to="Work" onClick={ toggleNav2 }>Work</Link>
+      </MenuItem>
+      <MenuItem key="Blog">
+        <Link to="Blog" onClick={ toggleNav2 }>Blog</Link>
+      </MenuItem>
+    </NavMenu>
+  </nav>;
+};

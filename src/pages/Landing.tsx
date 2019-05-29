@@ -37,9 +37,10 @@ const Jumbotron = styled.div`
   grid-column: 2/3;
   grid-row: 2/3;
   justify-self: end;
-  pointer-events: none;
   margin: 1em;
   padding: 1em;
+  pointer-events: none;
+  user-select: none;
   @media (max-width: 980px) {
     grid-column: 1/3;
   }

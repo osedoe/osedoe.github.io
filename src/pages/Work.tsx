@@ -1,8 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { Heading } from '../components/Heading';
-import { inject, observer } from 'mobx-react';
-import { WorkStore } from '../stores/WorkStore';
 
 const Section = styled.section`
   background: linear-gradient(
@@ -34,28 +32,14 @@ const Subtitle = styled.p`
   font-size: 1.2em;
 `;
 
-interface WorkProps {
-  workStore?: WorkStore;
-}
-
-interface WorkState {
-
-}
-
-@inject('workStore')
-@observer
-export default class Work extends React.Component<WorkProps, WorkState> {
-  render() {
-    const { sectionTitle, sectionSubtitle } = this.props.workStore!;
-    return <Section>
-      <HeadingWrapper>
-        <Heading title={ sectionTitle }/>
-      </HeadingWrapper>
-      <SubtitleWrapper>
-        <Subtitle>{sectionSubtitle}</Subtitle>
-
-      </SubtitleWrapper>
-    </Section
-    >;
-  }
-}
+export const Work = () => {
+  return <Section>
+    <HeadingWrapper>
+      <Heading title="Work"/>
+    </HeadingWrapper>
+    <SubtitleWrapper>
+      <Subtitle>"All my work is uploaded on GitHub. I tend to only showcase here some FrontEnd stuff."</Subtitle>
+    </SubtitleWrapper>
+  </Section
+  >;
+};
