@@ -9,6 +9,7 @@
     "@fortawesome/free-regular-svg-icons": "^5.8.1",
     "@fortawesome/free-solid-svg-icons": "^5.8.1",
     "@fortawesome/react-fontawesome": "^0.1.4",
+    "extend-random": "^2.0.1",
     "gh-pages": "^2.0.1",
     "parcel-bundler": "^1.11.0",
     "react": "^16.7.0",
