@@ -4444,10 +4444,10 @@ express@^4.16.2:
     utils-merge "1.0.1"
     vary "~1.1.2"
 
-extend-random@^2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/extend-random/-/extend-random-2.0.1.tgz#294f17bae794e8bbd71e2330639250dc118fea3a"
-  integrity sha512-fxHpSwAnSsWgy+IfR4/LFqtrTWSBbIOTuSHn7xbbvguqwsqF6ai3vfDBjdcwZ98arCXIOfIsrTHGqr3hLMV5Yg==
+extend-random@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/extend-random/-/extend-random-2.2.0.tgz#e579cc6e5c199c4cef96a3055f9b9f1e41f62b3a"
+  integrity sha512-0sdWy9RU8xYRN15WkEeENvhuSbrtXEPFJLD4KNp9j9iR+8OMD2CbZ2wt2UbeMjLo4W2mcJAg3KiO0GOttgMpxA==
   dependencies:
     tslint "^5.16.0"
     typescript "^3.5.1"
