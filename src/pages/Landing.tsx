@@ -1,10 +1,7 @@
 import React from 'react';
-import { inject, observer } from 'mobx-react';
-import { LandingStore } from '../stores/LandingStore';
 import styled from '@emotion/styled';
 import { Power2, SteppedEase, TimelineLite, TimelineMax, TweenMax } from 'gsap';
 import Particles from 'react-particles-js';
-import { generateRandomNumber } from '../utils/utils';
 import * as particlesJSON from './../utils/particles.json';
 
 const particlesParams: any = particlesJSON;
@@ -52,38 +49,21 @@ const H4 = styled.h4`
   }
 `;
 
-export interface LandingProps {
-  landingStore?: LandingStore;
-}
+export const Landing = () => {
+  // TweenMax.from(this.jumbotronRef, 2.5, {
+  //   x: () => generateRandomNumber(-1000, 1000),
+  //   y: () => generateRandomNumber(-1000, 1000),
+  //   opacity: 0
+  // });
 
-@inject('landingStore')
-@observer
-export default class Landing extends React.Component<LandingProps, {}> {
-  private jumbotronRef: HTMLDivElement | null;
-
-  constructor(props: LandingProps) {
-    super(props);
-    this.jumbotronRef = null;
-  }
-
-  componentDidMount(): void {
-    TweenMax.from(this.jumbotronRef, 2.5, {
-      x: () => generateRandomNumber(-1000, 1000),
-      y: () => generateRandomNumber(-1000, 1000),
-      opacity: 0
-    });
-  }
-
-  render() {
-    const { headingText } = this.props.landingStore!;
-    return <Wrapper>
-      <StyledParticles params={particlesParams}/>
-      <Jumbotron ref={ div => this.jumbotronRef = div }>
-        <h1>{ headingText.greeting }</h1>
-        <h2>{ headingText.introduction }</h2>
-        <h3>{ headingText.job }</h3>
-        <H4>{ headingText.description }</H4>
-      </Jumbotron>
-    </Wrapper>;
-  }
-}
+  return <Wrapper>
+    <StyledParticles params={ particlesParams }/>
+    {/*<Jumbotron ref={ div => this.jumbotronRef = div }>*/ }
+    <Jumbotron>
+      <h1>Hola.</h1>
+      <h2>I'm Jose Diaz</h2>
+      <h3>Full Stack Developer | Nologis</h3>
+      <H4>Specialized in JavaScript, TypeScript, ReactJS and NodeJS.</H4>
+    </Jumbotron>
+  </Wrapper>;
+};
