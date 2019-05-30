@@ -2,6 +2,7 @@
     --black: rgb(29, 32, 41);
     --white: rgb(245, 245, 245);
     --blue: rgb(0, 135, 255);
+    --blue-alpha: rgba(0, 135, 255, .2);
     --yellow: rgb(249, 205, 70);
 }
 

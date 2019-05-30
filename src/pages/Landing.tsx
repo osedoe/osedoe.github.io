@@ -55,26 +55,25 @@ const Jumbotron = styled.div`
 `;
 
 const H1 = styled.h1`
-  animation: ${ randomFadeIn } ease-in-out 2500ms;
+  animation: ${ randomFadeIn } ease-in-out 400ms;
 `;
 
 const H2 = styled.h2`
-  animation: ${ randomFadeIn } ease-in-out 2500ms;
+  animation: ${ randomFadeIn } ease-in-out 800ms;
 `;
 
 const H3 = styled.h3`
-  animation: ${ randomFadeIn } ease-in-out 2500ms;
+  animation: ${ randomFadeIn } ease-in-out 1600ms;
 `;
 
 const H4 = styled.h4`
-  animation: ${ randomFadeIn } ease-in-out 2500ms;
+  animation: ${ randomFadeIn } ease-in-out 2000ms;
   @media (max-width: 500px) {
     display: none;
   }
 `;
 
 export const Landing = () => {
-  console.log(typeof randomFadeIn);
   return <Wrapper>
     <StyledParticles params={ particlesParams }/>
     <Jumbotron>

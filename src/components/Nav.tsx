@@ -2,6 +2,19 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import styled from '@emotion/styled';
 import './Nav.css';
+import { keyframes } from '@emotion/core';
+
+const colorChange = keyframes`
+  from {
+    color: var(--white);
+  }
+  33% {
+    color: var(--blue);
+  }
+  to {
+    color: var(--yellow);
+  }
+`;
 
 const NavBurger = styled.div`
   box-sizing: border-box;
@@ -31,17 +44,34 @@ const NavCopy = styled.span`
   font-size: 1.3em;
   margin-right: .5em;
   user-select: none;
+  transition: all .4s;
+  position: relative;
+  :after {
+    content: '';
+    position: absolute;
+    background: transparent;
+    bottom: -2.5px;
+    left: -2.5px;
+    height: 110%;
+    width: 110%;
+    transition: all 600ms;
+    z-index: -1;
+    }
   :hover {
-    color: transparent;
-    background-image: -webkit-linear-gradient(
-      right,
-      var(--yellow) 33%,
-      var(--blue) 50%,
-      var(--white)
-    );
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    transition: all 4s;
+    :after {
+      content: '';
+      position: absolute;
+      border-top: 3px solid var(--blue);
+      border-left: 3px solid var(--blue);
+      border-right: 3px solid var(--yellow);
+      border-bottom: 3px solid var(--yellow);
+      bottom: -2.5px;
+      left: -6.5px;
+      height: 110%;
+      width: 110%;
+      transform: rotate(-5deg);
+      z-index: -1;
+    }
   }
 `;
 
@@ -71,14 +101,45 @@ const NavMenu = styled.div`
 
 const MenuItem = styled.li`
   align-items: center;
-  cursor: not-allowed;
   display: flex;
   height: 80px;
   justify-content: center;
   margin: .4em;
+  user-select: none;
   width: 160px;
-  & > * {
-    pointer-events: none;
+`;
+
+const StyledLink = styled(Link)`
+  position: relative;
+  text-decoration: none;
+  transition: all .8s;
+  user-select: none;
+  :after {
+    background: var(--yellow);
+    border-radius: 1px;
+    content: '';
+    height: 0;
+    left: -5%;
+    position: absolute;
+    top: 60%;
+    transition: all 600ms;
+    width: 110%;
+    z-index: -1;
+  }
+  &:hover {
+    text-decoration: underline;
+    transform: scale(1.2);
+    :after {
+      height: 40%;
+    }
+  }
+  &:focus {
+    :after {
+      background: var(--white);
+      height: 1px;
+      width: 10000px;
+      left: -5000px;
+    }
   }
 `;
 
@@ -93,16 +154,16 @@ export const Nav = () => {
     </NavBurger>
     <NavMenu className={ display ? 'menu active' : 'menu' }>
       <MenuItem key="Home">
-        <Link to="Home" onClick={ toggleNav }>Home</Link>
+        <StyledLink to="Home" onClick={ toggleNav }>Home</StyledLink>
       </MenuItem>
       <MenuItem key="About">
-        <Link to="About" onClick={ toggleNav }>About</Link>
+        <StyledLink to="About" onClick={ toggleNav }>About</StyledLink>
       </MenuItem>
       <MenuItem key="Work">
-        <Link to="Work" onClick={ toggleNav }>Work</Link>
+        <StyledLink to="Work" onClick={ toggleNav }>Work</StyledLink>
       </MenuItem>
       <MenuItem key="Blog">
-        <Link to="Blog" onClick={ toggleNav }>Blog</Link>
+        <StyledLink to="Blog" onClick={ toggleNav }>Blog</StyledLink>
       </MenuItem>
     </NavMenu>
   </nav>;
