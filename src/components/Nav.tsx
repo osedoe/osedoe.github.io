@@ -85,10 +85,6 @@ const MenuItem = styled.li`
 export const Nav = () => {
   const [display, setDisplay] = useState(false);
   const toggleNav = () => setDisplay(!display);
-  const toggleNav2 = event => {
-    event.preventDefault();
-    setDisplay(!display);
-  };
 
   return <nav>
     <NavBurger onClick={ toggleNav }>
@@ -97,16 +93,16 @@ export const Nav = () => {
     </NavBurger>
     <NavMenu className={ display ? 'menu active' : 'menu' }>
       <MenuItem key="Home">
-        <Link to="Home" onClick={ toggleNav2 }>Home</Link>
+        <Link to="Home" onClick={ toggleNav }>Home</Link>
       </MenuItem>
       <MenuItem key="About">
-        <Link to="About" onClick={ toggleNav2 }>About</Link>
+        <Link to="About" onClick={ toggleNav }>About</Link>
       </MenuItem>
       <MenuItem key="Work">
-        <Link to="Work" onClick={ toggleNav2 }>Work</Link>
+        <Link to="Work" onClick={ toggleNav }>Work</Link>
       </MenuItem>
       <MenuItem key="Blog">
-        <Link to="Blog" onClick={ toggleNav2 }>Blog</Link>
+        <Link to="Blog" onClick={ toggleNav }>Blog</Link>
       </MenuItem>
     </NavMenu>
   </nav>;

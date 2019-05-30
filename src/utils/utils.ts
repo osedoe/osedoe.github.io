@@ -1,3 +1,2 @@
-export function generateRandomNumber(min, max) {
-  return Math.random() * (max - min) + min;
-}
+export const generateRandomNumber = (min, max) =>
+  Math.random() * (max - min) + min;

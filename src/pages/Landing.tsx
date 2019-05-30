@@ -1,10 +1,21 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { Power2, SteppedEase, TimelineLite, TimelineMax, TweenMax } from 'gsap';
 import Particles from 'react-particles-js';
 import * as particlesJSON from './../utils/particles.json';
+import { keyframes } from '@emotion/core';
 
 const particlesParams: any = particlesJSON;
+
+const randomFadeIn = keyframes`
+  from {
+    opacity: 0;
+  }
+  95% {
+  }
+  to {
+    opacity: 1;
+  }
+`;
 
 const Wrapper = styled.div`
   background: linear-gradient(
@@ -43,26 +54,33 @@ const Jumbotron = styled.div`
   }
 `;
 
+const H1 = styled.h1`
+  animation: ${ randomFadeIn } ease-in-out 2500ms;
+`;
+
+const H2 = styled.h2`
+  animation: ${ randomFadeIn } ease-in-out 2500ms;
+`;
+
+const H3 = styled.h3`
+  animation: ${ randomFadeIn } ease-in-out 2500ms;
+`;
+
 const H4 = styled.h4`
+  animation: ${ randomFadeIn } ease-in-out 2500ms;
   @media (max-width: 500px) {
     display: none;
   }
 `;
 
 export const Landing = () => {
-  // TweenMax.from(this.jumbotronRef, 2.5, {
-  //   x: () => generateRandomNumber(-1000, 1000),
-  //   y: () => generateRandomNumber(-1000, 1000),
-  //   opacity: 0
-  // });
-
+  console.log(typeof randomFadeIn);
   return <Wrapper>
     <StyledParticles params={ particlesParams }/>
-    {/*<Jumbotron ref={ div => this.jumbotronRef = div }>*/ }
     <Jumbotron>
-      <h1>Hola.</h1>
-      <h2>I'm Jose Diaz</h2>
-      <h3>Full Stack Developer | Nologis</h3>
+      <H1>Hola.</H1>
+      <H2>I'm Jose Diaz</H2>
+      <H3>Full Stack Developer | Nologis</H3>
       <H4>Specialized in JavaScript, TypeScript, ReactJS and NodeJS.</H4>
     </Jumbotron>
   </Wrapper>;
