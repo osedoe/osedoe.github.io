@@ -6,29 +6,40 @@ import { AboutTable } from '../components/about/AboutTable';
 import { AboutAvatar } from '../components/about/AboutAvatar';
 
 const Section = styled.section`
-    background: linear-gradient(
+  background: linear-gradient(
     to bottom right,
     var(--black) 50%,
     black
   );
-    box-sizing: border-box;
-    color: var(--white);
-    display: grid;
-    height: 100vh;
-    grid-template-columns: 4fr 3fr;
-    grid-gap: 16px;
+  box-sizing: border-box;
+  color: var(--white);
+  display: grid;
+  min-height: 100vh;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 16px;
+  justify-content: center;
+  padding: 32px;
+  overflow: hidden;
+  @media (max-width: 980px) {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    padding: 32px;
+    align-items: center;
+  }
 `;
 
 const HeadingWrapper = styled.div`
-    grid-column: 1/3;
-    grid-row: 1/2;
-    justify-self: center;
+  grid-column: 1/3;
+  grid-row: 1/2;
+  justify-self: center;
 `;
 
 const TextWrapper = styled.div`
-    margin: 4px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  margin: 4px;
+  max-width: 600px;
 `;
 
 const SubHeading = styled.h3`

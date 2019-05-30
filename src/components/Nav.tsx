@@ -30,34 +30,23 @@ const NavCopy = styled.span`
   color: var(--white);
   font-size: 20px;
   margin-right: 8px;
-  user-select: none;
-  transition: all .4s;
   position: relative;
-  :after {
-    content: '';
-    position: absolute;
-    background: transparent;
-    bottom: -2.5px;
-    left: -2.5px;
-    height: 110%;
-    width: 110%;
-    transition: all 600ms;
-    z-index: -1;
+  text-shadow: 2px 2px 2px black;
+  transition: all .4s;
+  user-select: none;
+    :before {
+      content: attr(data-letters);
+      position: absolute;
+      z-index: 2;
+      overflow: hidden;
+      color: var(--blue);
+      white-space: nowrap;
+      width: 0;
+      transition: width ease-in-out 0.4s;
     }
   :hover {
-    :after {
-      content: '';
-      position: absolute;
-      border-top: 3px solid var(--blue);
-      border-left: 3px solid var(--blue);
-      border-right: 3px solid var(--yellow);
-      border-bottom: 3px solid var(--yellow);
-      bottom: -2.5px;
-      left: -6.5px;
-      height: 110%;
-      width: 110%;
-      transform: rotate(-5deg);
-      z-index: -1;
+    :before {
+     width: 100%;
     }
   }
 `;
@@ -75,6 +64,7 @@ const NavMenu = styled.div`
   list-style: none;
   position: absolute;
   right: 0;
+  text-shadow: 2px 2px 2px black;
   top: 0;
   width: 0;
   & a {
@@ -117,7 +107,7 @@ const StyledLink = styled(Link)`
     text-decoration: underline;
     transform: scale(1.2);
     :after {
-      height: 40%;
+      height: 50%;
     }
   }
   &:focus {
@@ -136,7 +126,7 @@ export const Nav = () => {
 
   return <nav>
     <NavBurger onClick={ toggleNav }>
-      <NavCopy>_Menu</NavCopy>
+      <NavCopy data-letters="_Menu">_Menu</NavCopy>
       <span className={ display ? 'burger active' : 'burger' }/>
     </NavBurger>
     <NavMenu className={ display ? 'menu active' : 'menu' }>

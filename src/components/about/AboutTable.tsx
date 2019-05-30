@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 
 const Table = styled.table`
     font-family: 'Exo 2', monospace;
-    margin: 4px;
+    margin: 0;
     padding: 4px;
 `;
 

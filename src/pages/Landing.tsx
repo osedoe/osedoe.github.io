@@ -29,6 +29,9 @@ const Wrapper = styled.div`
   grid-template-rows: 3fr 1fr 2fr;
   height: 100vh;
   position: relative;
+  @media (min-width: 1800px) {
+    grid-template-columns: 3fr 4fr 1fr;
+  }
 `;
 
 const StyledParticles = styled(Particles)`
@@ -45,9 +48,10 @@ const Jumbotron = styled.div`
   grid-column: 2/3;
   grid-row: 2/3;
   justify-self: end;
-  margin: 1em;
-  padding: 1em;
+  margin: 16px;
+  padding: 16px 62px;
   pointer-events: none;
+  text-shadow: 2px 2px 2px black;
   user-select: none;
   @media (max-width: 980px) {
     grid-column: 1/3;

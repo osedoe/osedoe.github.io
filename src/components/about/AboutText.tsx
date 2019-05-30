@@ -1,25 +1,25 @@
 import React from 'react';
 import styled from '@emotion/styled';
 
-const Div = styled.div`
-    display: grid;
-    grid-template-rows: 1fr 3fr;
+const Container = styled.div`
+    display: flex;
+    flex-direction: column;
     margin: 4px;
     padding: 4px;
-    height: 100%;
 `;
 
 const SubHeading = styled.h3`
     color: var(--blue);
     font-family: audiowide, monospace;
+    margin: 0;
     padding: 4px;
-    margin: 1px;
 `;
 
 const Paragraph = styled.p`
+    display: flex;
     font-family: 'Exo 2', monospace;
-    padding: 8px 32px 8px 8px;
-    margin: 1px;
+    margin: 0;
+    padding: 4px 32px 4px 4px;
     text-align: justify;
 `;
 
@@ -30,8 +30,9 @@ interface AboutTextProps {
 
 export const AboutText = (props: AboutTextProps) => {
     const { subtitle, text } = props;
-    return <Div>
+    return <
+        Container>
         <SubHeading>{subtitle}</SubHeading>
         <Paragraph>{text}</Paragraph>
-    </Div>;
+    </Container>;
 };

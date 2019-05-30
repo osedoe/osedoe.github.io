@@ -14,6 +14,7 @@ const Wrapper = styled.div`
   bottom: 0;
   left: 9px;
   opacity: .85;
+  overflow-y: hidden;
   :before {
     content: '';
     height: 201px;
