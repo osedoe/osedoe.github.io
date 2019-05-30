@@ -1,8 +1,8 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styled from '@emotion/styled';
-import { faGithubSquare, faTwitterSquare, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { generateRandomNumber } from '../utils/utils';
+import { faGithubSquare, faLinkedin, faTwitterSquare } from '@fortawesome/free-brands-svg-icons';
+import { generateRandomNumber } from 'extend-random';
 
 const Wrapper = styled.div`
   color: var(--white);
@@ -43,7 +43,7 @@ const Wrapper = styled.div`
 export const SocialBar = () => {
   return <Wrapper>
     <a href="https://github.com/osedoe"><FontAwesomeIcon icon={ faGithubSquare }/></a>
-    <a href="https://twitter.com/Osedoe?lang=en"><FontAwesomeIcon icon={ faTwitterSquare}/></a>
+    <a href="https://twitter.com/Osedoe?lang=en"><FontAwesomeIcon icon={ faTwitterSquare }/></a>
     <a href="https://linkedin.com/in/jose-diaz-gonzalez-696067107"><FontAwesomeIcon icon={ faLinkedin }/></a>
   </Wrapper>;
 };
