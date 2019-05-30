@@ -19,7 +19,7 @@ const Box = styled.div`
 const Line = styled.div`
     background: black;
     height: 120px;
-    margin: 1em;
+    margin: 16px;
     width: 2px;
 `;
 

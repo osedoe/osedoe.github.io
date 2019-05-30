@@ -6,23 +6,23 @@ const LogoWrapper = styled.div`
     box-sizing: border-box;
     color: var(--white);
     font-family: Audiowide, monospace;
-    font-size: 1.3em;
+    font-size: 20px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     text-align: center;
-    margin: 1em;
+    margin: 16px;
     pointer-events: none;
-    height: 2em;
-    width: 10em;
+    height: 32px;
+    width: 160px;
     @media (max-width: 1000px) {
-      font-size: 1em;
+      font-size: 16px;
       margin: 0;
     }
 `;
 
 const WhiteText = styled.p`
-    font-size: 1.3em;
+    font-size: 20px;
 `;
 
 const SpanBlue = styled.span`

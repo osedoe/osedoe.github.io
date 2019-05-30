@@ -2,38 +2,25 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import styled from '@emotion/styled';
 import './Nav.css';
-import { keyframes } from '@emotion/core';
-
-const colorChange = keyframes`
-  from {
-    color: var(--white);
-  }
-  33% {
-    color: var(--blue);
-  }
-  to {
-    color: var(--yellow);
-  }
-`;
 
 const NavBurger = styled.div`
   box-sizing: border-box;
   color: var(--white);
   cursor: pointer;
   font-family: Audiowide, monospace;
-  font-size: 1.3em;
+  font-size: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 1em;
+  margin: 16px;
   position: absolute;
   right: 0;
   top: 0;
-  height: 2em;
-  width: 10em;
+  height: 32px;
+  width: 160px;
   z-index: 1;
   @media (max-width: 1000px) {
-    font-size: 1em;
+    font-size: 16px;
     margin: 0;
   }
 `;
@@ -41,8 +28,8 @@ const NavBurger = styled.div`
 const NavCopy = styled.span`
   background: transparent;
   color: var(--white);
-  font-size: 1.3em;
-  margin-right: .5em;
+  font-size: 20px;
+  margin-right: 8px;
   user-select: none;
   transition: all .4s;
   position: relative;
@@ -82,7 +69,7 @@ const NavMenu = styled.div`
   display: flex;
   flex-direction: column;
   font-family: Audiowide, monospace;
-  font-size: 2em;
+  font-size: 32px;
   height: 100vh;
   justify-content: center;
   list-style: none;
@@ -104,7 +91,7 @@ const MenuItem = styled.li`
   display: flex;
   height: 80px;
   justify-content: center;
-  margin: .4em;
+  margin: 6px;
   user-select: none;
   width: 160px;
 `;

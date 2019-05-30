@@ -9,10 +9,10 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 1.8em;
+  font-size: 28px;
   position: fixed;
   bottom: 0;
-  left: .6em;
+  left: 9px;
   opacity: .85;
   :before {
     content: '';

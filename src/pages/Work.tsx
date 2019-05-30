@@ -11,10 +11,10 @@ const Section = styled.section`
   color: var(--white);
   display: grid;
   font-family: Audiowide, monospace;
-  grid-gap: 1em;
+  grid-gap: 16px;
   grid-template-columns: repeat(4, 1fr);
   height: 100vh;
-  padding: 2em;
+  padding: 32px;
 `;
 
 const HeadingWrapper = styled.div`
@@ -29,7 +29,7 @@ const SubtitleWrapper = styled.div`
 
 const Subtitle = styled.p`
   color: var(--yellow);
-  font-size: 1.2em;
+  font-size: 19px;
 `;
 
 export const Work = () => {

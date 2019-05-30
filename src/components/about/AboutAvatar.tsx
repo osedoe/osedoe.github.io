@@ -57,12 +57,12 @@ const SukaFrame = styled.div`
 
 const Resume = styled.div`
     display: flex;
-    margin-top: 4em;
+    margin-top: 64px;
     width: 100%;
     & p {
         border: 3px solid var(--white);
         font-family: Audiowide, monospace;
-        padding: .5em;
+        padding: 8px;
     }
 `;
 

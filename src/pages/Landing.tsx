@@ -41,7 +41,7 @@ const Jumbotron = styled.div`
   align-self: end;
   color: var(--white);
   font-family: Audiowide, monospace;
-  font-size: 1.5em;
+  font-size: 24px;
   grid-column: 2/3;
   grid-row: 2/3;
   justify-self: end;

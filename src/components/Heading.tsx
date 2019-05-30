@@ -4,7 +4,7 @@ import styled from '@emotion/styled';
 const Base = styled.div`
     background: var(--black);
     position: relative;
-    margin-top: 4em;
+    margin-top: 64px;
     height: 85px;
     width: 140px;
     z-index: 1;
@@ -18,7 +18,7 @@ const BlueBox = styled.span`
     position: absolute;
     left: 14%;
     bottom: 30%;
-    padding: 1em 1.5em .5em .1em;
+    padding: 16px 24px 8px 1px;
     width: 65%;
     z-index: 1;
 `;

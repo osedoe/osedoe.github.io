@@ -4,22 +4,22 @@ import styled from '@emotion/styled';
 const Div = styled.div`
     display: grid;
     grid-template-rows: 1fr 3fr;
-    margin: .3em;
-    padding: .3em;
+    margin: 4px;
+    padding: 4px;
     height: 100%;
 `;
 
 const SubHeading = styled.h3`
     color: var(--blue);
     font-family: audiowide, monospace;
-    padding: .3em;
-    margin: .1em;
+    padding: 4px;
+    margin: 1px;
 `;
 
 const Paragraph = styled.p`
     font-family: 'Exo 2', monospace;
-    padding: .5em 2em .5em .5em;
-    margin: .1em;
+    padding: 8px 32px 8px 8px;
+    margin: 1px;
     text-align: justify;
 `;
 

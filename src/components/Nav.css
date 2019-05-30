@@ -1,7 +1,7 @@
 .burger {
     background: var(--blue);
     box-shadow: 1px 1px 1px var(--black);
-    margin: .4em;
+    margin: 6px;
     position: relative;
     height: 4px;
     width: 25px;

@@ -16,9 +16,9 @@ const Section = styled.section`
     display: grid;
     height: 100vh;
     grid-template-columns: 4fr 3fr;
-    grid-gap: 1em;
+    grid-gap: 16px;
     justify-content: center;
-    padding: 2em;
+    padding: 32px;
 `;
 
 const HeadingWrapper = styled.div`
@@ -28,21 +28,21 @@ const HeadingWrapper = styled.div`
 `;
 
 const TextWrapper = styled.div`
-    margin: .3em 1.5em;
+    margin: 4px 24px;
 `;
 
 const SubHeading = styled.h3`
     color: var(--blue);
     font-family: Audiowide, monospace;
-    margin: 0 .1em;
-    padding: .3em;
+    margin: 0 1px;
+    padding: 4px;
 `;
 
 const TableWrapper = styled.div`
     display: flex;
     flex-direction: column;
-    margin: 0 .3em;
-    padding: .3em;
+    margin: 0 4px;
+    padding: 4px;
 `;
 
 const sectionTexts: string[] = [
