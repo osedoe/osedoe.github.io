@@ -15,7 +15,7 @@ const Container = styled.div`
 
 export default class App extends React.Component<{}, {}> {
   render() {
-    return <Router>
+    return <Router basename={process.env.PUBLIC_URL}>
       <Container>
         <Header/>
         <Route exact path="/" component={ Landing }/>
