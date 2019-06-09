@@ -9,7 +9,9 @@ const HeaderWrapper = styled.div`
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
+  overflow: hidden;
   position: absolute;
+  height: 100vh;
   width: 100vw;
   z-index: 4;
 `;

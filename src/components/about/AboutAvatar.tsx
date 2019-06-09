@@ -104,8 +104,8 @@ export const AboutAvatar = () => {
         <img src="/suka1.jpg" alt="Suka"/>
       </SukaFrame>
     </DivFrame>
-    <Resume>
-      <p>My Resume</p>
-    </Resume>
+    {/*<Resume>*/}
+      {/*<p>My Resume</p>*/}
+    {/*</Resume>*/}
   </AvatarWrapper>;
 };

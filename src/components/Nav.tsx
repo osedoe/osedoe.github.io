@@ -136,9 +136,6 @@ export const Nav = () => {
       <MenuItem key="About">
         <StyledLink to="About" onClick={ toggleNav }>About</StyledLink>
       </MenuItem>
-      <MenuItem key="Work">
-        <StyledLink to="Work" onClick={ toggleNav }>Work</StyledLink>
-      </MenuItem>
       <MenuItem key="Blog">
         <StyledLink to="Blog" onClick={ toggleNav }>Blog</StyledLink>
       </MenuItem>

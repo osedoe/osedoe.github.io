@@ -26,8 +26,10 @@ const Wrapper = styled.div`
   background-size: cover;
   display: grid;
   grid-template-columns: 3fr 4fr;
-  grid-template-rows: 3fr 1fr 2fr;
+  grid-template-rows: 1fr 2fr 1fr;
   height: 100vh;
+  width: 100%;
+  overflow: hidden;
   position: relative;
   @media (min-width: 1800px) {
     grid-template-columns: 3fr 4fr 1fr;
@@ -55,6 +57,7 @@ const Jumbotron = styled.div`
   user-select: none;
   @media (max-width: 980px) {
     grid-column: 1/3;
+    text-align: center;
   }
 `;
 
@@ -77,13 +80,17 @@ const H4 = styled.h4`
   }
 `;
 
+const Span = styled.span`
+  font-family: 'Exo 2', sans-serif;
+`;
+
 export const Landing = () => {
   return <Wrapper>
     <StyledParticles params={ particlesParams }/>
     <Jumbotron>
       <H1>Hola.</H1>
       <H2>I'm Jose Diaz</H2>
-      <H3>Full Stack Developer | Nologis</H3>
+      <H3>Full Stack Developer <Span>@</Span>Nologis</H3>
       <H4>Specialized in JavaScript, TypeScript, ReactJS and NodeJS.</H4>
     </Jumbotron>
   </Wrapper>;
