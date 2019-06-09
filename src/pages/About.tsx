@@ -62,7 +62,7 @@ const sectionTexts: string[] = [
   // tslint:disable-next-line:max-line-length
   `I am truly passionate about the craft of programming and problem-solving, and love all things web. I specialize in the Front-End, ReactJS and NodeJS, but I can dive into Back-End, databases and DevOps easily. I am a JavaScript/TypeScript advocate but I have dabbled with Java SE/EE and PHP in the past. Currently, I'm working from home at Nologis.`,
   // tslint:disable-next-line:max-line-length
-  `When I'm not building websites, going through CodeWars or promoting OSS -I like playing indie games, cooking, and playing pool with a paint of beer. Oh, also I\'m a dog lover and the proud son of Suka, a half a staffy half dalmatian dog.`
+  `When I'm not building websites, going through CodeWars or promoting OSS -I like playing indie games, cooking, and playing pool with a pint of beer. Oh, also I\'m a dog lover and the proud father of Suka, a half a staffy half dalmatian dog.`
 ];
 
 const sectionSkills: string[][] = [
